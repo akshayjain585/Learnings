@@ -1,0 +1,11 @@
+<suite name = "Test Suite">
+<test name = "Tools QA">
+<classes>
+<class name = "practiceSelenium.TestNG" />
+<class name = "practiceSelenium.Sequencing" />
+<class name = "practiceSelenium.Prioritizing" />
+<class name = "practiceSelenium.DependentMethods" />
+<class name = "practiceSelenium.ReporterLog4j" />
+</classes>
+</test>
+</suite>

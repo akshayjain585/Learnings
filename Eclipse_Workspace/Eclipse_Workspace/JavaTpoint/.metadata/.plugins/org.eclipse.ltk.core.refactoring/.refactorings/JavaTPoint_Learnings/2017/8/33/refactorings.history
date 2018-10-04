@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;allPrograms.Fib.java&apos; to &apos;FactorialExample.java&apos;&#x0A;- Original project: &apos;JavaTPoint_Learnings&apos;&#x0A;- Original element: &apos;allPrograms.Fib.java&apos;&#x0A;- Renamed element: &apos;allPrograms.FactorialExample.java&apos;" description="Rename compilation unit &apos;Fib.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;allPrograms{Fib.java" name="FactorialExample.java" references="false" stamp="1503015900735" version="1.0"/>
+</session>

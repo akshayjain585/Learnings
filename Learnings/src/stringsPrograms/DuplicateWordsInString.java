@@ -1,0 +1,47 @@
+package stringsPrograms;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class DuplicateWordsInString {
+	
+	public static void duplicateWords(String input){
+		
+		 String w = input.toLowerCase();
+		 String[] words = w.split(" ");
+		 
+		 Map<String,Integer> map = new HashMap<String,Integer>();
+		 //Set<String> duplicate = new HashSet<>();
+		 for(String key:words){
+			 if(map.containsKey(key)){
+				 //duplicate.add(key);
+				 map.put(key, map.get(key)+1);
+				
+			 }else{
+				 map.put(key, 1);
+			 }
+		 }
+		 
+		 //System.out.println(duplicate);
+		 Set<String> set = map.keySet();
+		 for(String key:set){
+			 if(map.get(key)>1){
+				 System.out.println("The duplicate words in String are: "+map.get(key)+" and the word is: "+key);
+				 
+
+			 }
+		 }
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//String input = "Java J2EE java JaVAa j2eee";
+		String input = "my name is my name";
+		duplicateWords(input);
+	}
+
+}

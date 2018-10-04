@@ -1,0 +1,75 @@
+/*Practice Exercise
+
+Launch new Browser
+Open “http://toolsqa.wpengine.com/automation-practice-form/“
+Challenge One – Select the deselected Radio button (female) for category Sex (Use IsSelected method)
+Challenge Two – Select the Third radio button for category ‘Years of Exp’ (Use Id attribute to select Radio button)
+Challenge Three – Check the Check Box ‘Automation Tester’ for category ‘Profession'( Use Value attribute to match the selection)
+Challenge Four – Check the Check Box ‘Selenium IDE’ for category ‘Automation Tool’ (Use cssSelector)*/
+
+package selenium_Learning;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class CheckboxRadioButton {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+		String URL = "http://toolsqa.wpengine.com/automation-practice-form/";
+		driver.get(URL);
+
+		List<WebElement> radioButton = driver.findElements(By.name("sex"));
+
+		boolean bval = radioButton.get(0).isSelected();
+
+		if(bval == true){
+			radioButton.get(1).click();
+		}else{
+			radioButton.get(0).click();
+		}
+
+		driver.findElement(By.id("exp-3")).click();
+
+		List<WebElement> checkBox = driver.findElements(By.name("profession"));
+
+		int checkBoxSize = checkBox.size();
+
+		for (int i=0; i<checkBoxSize; i++){
+
+			String value = checkBox.get(i).getAttribute("value");
+
+			if(value.equalsIgnoreCase("Automation Tester")){
+				checkBox.get(i).click();
+
+			}else{
+				System.out.println("No values found");
+			}
+
+		}
+		
+		driver.findElement(By.cssSelector("input[value='Selenium Webdriver']")).click();
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+}

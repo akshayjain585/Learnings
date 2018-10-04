@@ -1,0 +1,27 @@
+package javatpointLearnings;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ExampleMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Map<String,Integer> map = new HashMap<String,Integer>();
+		
+		map.put("Akshay", 5);
+		map.put("Harsh", 4);
+		map.put("Nidhi", 2);
+		map.put("Patel", 9);
+		map.put("Abin", 7);
+		
+		for(String sc: map.keySet()){
+			System.out.println(sc);
+		}
+		
+		
+
+	}
+
+}
