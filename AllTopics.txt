@@ -1,0 +1,936 @@
+Topics:
+1. Programs
+2. Selenium : TakeScreenshot,DataProvider, ReadWrite Operation
+3. Jenkins
+4. API Testing
+5. Manual
+6. Performance
+7. SQL
+8. Linux
+9. Security : https://www.greycampus.com/blog/information-security/owasp-top-vulnerabilities-in-web-applications
+10. Prepare test cases.
+11. Puzzles
+12. Difference between collections topics, Abstraction Interface, synchronised thread safe and non synchronized not thread safe
+13. Thread life cycle
+14. JDBC connection
+15. Serialisation and Deserialisation : For ref : http://toolsqa.com/java/basic-java-programming/serialization-deserialization-java/
+Ans. Process of converting the instance of class(Object of class) into bytestream so that it can be stored in a file/disk or can be sent to another computer via network to save the state of object due to shutdown or hibernate.
+16. Download file popup.
+17. Read XML file, properties, 
+18. Memory leak : https://www.youtube.com/watch?v=iFr1cvwhfbw (ATM example) : https://dzone.com/articles/memory-leak-andjava-code
+19. Synchronised method and synchronised statement
+20. Registry : Its a hierarchical DB in windows which manages all the hardware info and applications.
+21. Virtual memory : The memory used by the OS when it runs out of RAM to run other programs. This is basically a hard disk space used as it is RAM.
+22. Singleton pattern
+23. How Map and HashCode() works internally?
+24. Difference between mutable and immutable objects. Create a immutable class? : https://www.javatpoint.com/how-to-create-immutable-class
+25. Explain your project architecture end to end?
+
+
+Xpath :
+1. "//tagName[@Attribute='Value']" : Normal Case
+2. "//tagName[contains(@Attribute,'value')]": Dynamically handle
+3. "//tagName[starts-with(@Attribute,'value')]" : Dynamically handle
+4. "//tagName[text()='value']" : To get text from webpage
+5. "//tagName[@Attribute='value' and @attribute='value' and @attribute='value']" : To use multiple attribute
+6. "//*[contains(text(),'value')]" : To get xpath using contains and text method
+7. //tagName[@attribute='value']/tagName : Parent-child : Relative-Absolute xpath
+8. "//input[@type='text' and not(contains(@title,'Search'))]"
+
+
+Some of the common assertions supported by TestNG are
+
+    assertEqual(String actual,String expected)
+    assertEqual(String actual,String expected, String message)
+    assertEquals(boolean actual,boolean expected)
+    assertTrue(condition)
+    assertTrue(condition, message)
+    assertFalse(condition)
+    assertFalse(condition, message)
+
+
+Note : Selenium Web driver makes direct calls to browser using each browsers native support for automation, while Selenium RC requires selenium server to inject Javascript into the browser
+
+
+1. moveToElement() : To hover the mouse.
+2. contextClick() : To right click
+3. dragAndDrop(); : actions.dragAndDrop("SourceLocator","DestinationLocator");
+4. No. of frames : List<WebElement> frames = driver.findElements(By.xpath("//frame")); : int totalframes = frames.size();
+5. Scroll : Using JavaScript : JavascriptExecutor jse = (JavascriptExecutor) driver; jse.executeScript
+6. isDisplayed : To see if element is visible and isSelected : If its selected and isEnabled() : If its enabled
+7. Ques 41) How do u get the attribute of the web element ?
+8. Take screenshot
+9. Enter/Tab using Actions class : ac.sendKeys(Keys.ENTER): for tab and (Keys.RETURN) : for Enter
+10. Switch back from frame : use method defaultContent(); using switchTo()
+11. Double click : act.doubleClick(webElement);
+12. How will you handle dynamic elements ?
+13. Synchronisation
+14. TestNG listeners
+14. Relative and Absolute xpath
+15. Multiple window
+15. Desired Capabilities
+16. Thread.sleep(2000) and Selenium.setSpeed(2000) : setSpeed waits after every command
+
+driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+
+public static takeScreenshot(String fileName){
+	try{
+		File src = ((TakeScreenshot)driver).getScreenshotAs(OutputType.File);
+		FileUtils.copyFile(src,"Screenshot\\"+)
+	}
+}
+
+WebElement frame= driver.findElement(By.xpath("//frame"));
+
+WebElement frame =  driver.switchTo().frame(frame)
+
+Table : http://www.softwaretestinghelp.com/selenium-tutorial-18/
+Static table :
+
+for(int rows=1; rows<=5; rows++){
+	for(int col=1; col<=3; col++){
+		System.out.println(driver.findElement(By.xpath("//tagName[@att='value']/table[1]/tbody/tr[rows]/td[col])))
+	}
+}
+
+
+************* Handling WebTable in Selenium ****************************************************************************************************************
+
+Table Format : 
+
+<table>
+	<thead>
+		<tr>
+			<th>  </th>
+			<th>  </th>
+			<th>  </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>  </td>
+			<td>  </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td>  </td>
+			<td>  </td>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td>  </td>
+			<td>  </td>
+		</tr>
+	</tbody>
+</table>
+
+Ref : https://money.rediff.com/gainers/bsc/daily/groupa?
+
+Code : http://www.softwaretestingstudio.com/read-data-web-table-selenium/
+
+Q1. Handle the dynamic webtable and read all the columns in each row.
+Ans. Above table has 1 row of heading and 3 rows normal with total of 4 rows having 3 column in each row.
+
+1. Identify the webtable first.
+2. Get the total number of rows inside a table now using findElements with tagName (tr)
+3. Iterate through the rows to get the total number of column.
+4. Get the total number of column in each row
+5. Iterate through the column to print the value of each cell
+
+WebElement table = driver.findElement(By.xpath("//table[@class='dataTable']"));
+List<WebElement> rows = table.findElements(By.tagName("tr"));
+for(int i=0; i<rows.size(); i++){
+	List<WebElement> col = rows.get(i).findElements(By.tagName("td"));
+	col_count = col.size();
+	for(int j=0; j<col.size(); j++){
+		System.out.println(col.get(j).getText());
+	}
+}
+
+2. Handle the static table where you know the number of rows and columns?
+Ans. WebElement table = driver.findElement("table");
+	List rows = table.findElements(By.tagName("tr"));
+	List col = table.findElements(By.tagName("td"));
+	for(int i=0; i<rows.size(); i++){
+		for(int j=0; j<col.size(); j++){
+			System.out.println(col.get(j).getText());
+		}
+	}
+	
+3. How to print a single column value from all the rows starting from first to last?
+Ans. WebElement table = driver.findElement(By.xpath("table"));
+List<WebElement> rows = table.findElements(By.tagName("tr"));
+
+/*
+
+Below is comment part of code to identify the pattern. Here we are fetching value of all 4th column from each row.
+Sample xpath :
+//*[@id='customers']/tbody/tr[1]/td[4]  //4th column in 1st row
+//*[@id='customers']/tbody/tr[2]/td[4]	//4th column in 2nd row
+//*[@id='customers']/tbody/tr[3]/td[4]	//4th column in 3rd row
+
+*/
+
+String beforeXpath = "//*[@id='customers']/tbody/tr[";
+String afterXpath = "]/td[4]" ;
+
+for(int i=0; i<rows.size(); i++){
+	String actualxpath = beforeXpath+i+afterXpath;
+	WebElement element = driver.findElement(By.xpath(actualXpath));
+	System.out.println(element.getText());
+//To validate the value
+	if(element.getText().equals("value")){
+		System.out.println("true")
+	}
+}
+
+************* Jmeter Performance Testing Questions!****************************************************************************************************************
+
+ThreadGroup : To simulate the number of users to hit the server for checking the performance.
+Ramp-up period : Defines the time difference between each thread to make a request to the server
+Loop Count : Defines the times each thread would make a request to the server.
+Samplers : Defines the type of request thread will make to a server like http, ftp, java request or jdbc request.
+Controllers : Used to control the flow of an application like performing some other task after hitting the server for each thread : Uses if,for loop.
+Listeners: To show the reports in tree,graph formats
+Timers : To define the delay after performing the requests : Uses random, constant timers etc.
+Pre-processor : To clear the DB before login or anything which needs to be done before making a request
+Post-processor : To perform the activities after making a request to a server.
+Distributed Testing : By using a master-slave combination and distributing the load from each machine else server/local machine would crash if all threads are used from same machine.
+Jmeter Non GUI mode : jmeter -n -t <scriptname.jmx>
+
+To check reports detail : http://www.testingjournals.com/understand-summary-report-jmeter/
+
+Label : Name/URL of the specific HTTP request.
+Samples : No. of virtual users per request.
+Min : Min time taken by a sample for specific label.
+Max : Max time taken by a sample for specific label.
+Error% : Percentage of failed request per label.
+Throughput : No. of request processed by the server per time unit(sec,min,hours). Larger throughput is better.
+
+**************** Test Lead Questions!*********************************************************************************************************************************
+
+I am not only responsible for execution but also responsible for the output of testing activities.
+
+Begin with Project :
+1. Analyze and understand the requirements.
+2. KT to the testing team and self along with queries.
+3. Kick off meeting with queries discussion along with the mindmap.
+
+TestPlanning process :
+1. To identify the scope of the testing.
+2. Types of testing : Functional/Non Functional : Performance, Security
+3. Testing Effort/Resources
+4. Timelines: Deadlines
+5. Features to be tested/Not to be tested
+6. Test Environment
+7. Risks involved
+8. Entry Criteria
+9. Exit Criteria
+
+
+Responsibilities on daily basis :
+1. Review the testing activities majorly by conducting the standups/scrum
+2. Keep a track of new/updated requirements, having them added in the test cases and validation.
+3. Make sure that environment is stable for testers to continue with the testing.
+4. Keep a check of bug raised on daily/once in 2 days.
+
+	
+************* Selenium *********************************************************************************************************
+
+1. Limitations of Selenium
+Ans. WebBased application, Doesn't support captcha/barcode readers, mobile automation(can do using Appium), reporting (Need to use TestNG, JUnit)
+
+2. Diff between Implicit/Explicit/Fluent/PageLoadTimeout/Thread.sleep
+Ans. Implicit is for entire page to wait before giving an exception, Explicit to wait for one particular element.
+Fluent wait is to apply wait after 5 sec or so means in duration, PageLoadtimeout is for loading the URL, thread.sleep wait is wait explicitly for one element making your thread to go in sleep mode.
+
+3. To check if checkbox is selected?
+Ans. driver.findElement(By.id(" ")).isSelected();
+This returns true if selected but throws an exception if false so need to use catch block and return the value false.
+Another way of doing it :
+driver.findElement(By.id(" ")).getAttribute(" ").contains("checked");
+
+4. How to manage multiple windows in Selenium?
+Ans. String parentWindow = driver.getWindowHandle(); //This returns a String
+Set<String> windows = driver.getWindowHandles(); //This returns set of string as set returns unique elements of all the windows present.
+ArrayList<String> wList = new ArrayList(); //ArrayList maintains the sequence
+Iterator it = windows.iterator();
+while(it.hasNext()){       //It will store all the windows in ArrayList
+	wList.add(it.next());
+}
+driver.switchTo().window(wList.get(indexNumber));
+
+5. How to get coordinate of the window/element ?
+Ans. For window :
+Position p = driver.manage().window().getPosition(); 
+p.getX() and p.getY();
+
+Location l = driver.findElement(By.xpath("")).getLocation();
+l.getX() and l.getY();
+
+6. How to do mouser over,dragdrop,doubleclick, rightclick,keys operation in selenium?
+Ans. Using Actions class
+Actions action = new Actions(driver);
+action.moveToElement(driver.findElement(By.xpath(" "))).click().build().perform(); //To move to the element
+//Drag and Drop
+WebElement source = driver.findElement(By.xpath(" "));
+WebElement target = driver.findElement(By.xpath(" "));
+action.dragAndDrop(source,target);
+//Another way of drag and drop
+action.clickAndHold(driver.findElement(By.xpath(" "))).moveToElement(driver.findElement(By.xpath(" "))).release(driver.findElement(By.xpath(" "))).build().perform();
+//DoubleClick and RightClick
+action.doubleClick(driver.findElement(By.xpath(" ")));
+action.contextClick(driver.findElement(By.xpath(" ")));
+//Keys Operation
+action.sendKeys(Keys.ENTER); //All keyboard functions are available in Keys class
+
+action.keyDown(webElement,Keys.SHIFT).sendKeys("Name").keyUp(webElement,Keys.SHIFT).build().perform();
+actions.keyDown(Keys.COMMAND).keyDown(Keys.SHIFT).click(link),keyUp(Keys.COMMAND).keyUp(Keys.SHIFT).build().perform();
+
+7. How to handle Alert,Frames and DropDown?
+Ans : Alert :
+Alert al = driver.switchTo().alert();
+al.accept(); al.dismiss();
+//Frames
+int noOfFrames = driver.findElements(By.tagName("iframe")).size();
+driver.switchTo().frame() : frame() is overloaded method which can take either frame index as int, frame name as String or frame element as WebElement.
+driver.switchTo().defaultContent(); //To move back to main window.
+//DropDown
+Select s = new Select(driver.findElement(By.xpath(" ")));
+s.selectByIndex(); //
+
+8. How to handle https website in selenium?
+Ans. FirefoxProfile profile = new FirefoxProfile();
+profile.setAcceptUntrustedCertificate(false);
+WebDriver driver = new Firefoxdriver(profile);
+
+9. How to login into any site if its showing any authetication popup for user name and pass ?
+Ans. Pass the credentials in URL
+driver.get(http://username:password@URL);
+
+
+10. Waits :
+Implicit Wait : driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+Explicit Wait : WebDriverWait wait = new WebDriverWait(driver,20);
+WebElement link = wait.until(ExpectedConditions.visibilityOfElementLocated(driver.findElement(By.xpath("//a"))));
+FluentWait : Wait wait = new FluentWait(driver).withtimeout(20,SECONDS).pollingevery(5,SECONDS).ignore(Exception.class); 
+Implicit Wait : Throws NoSuchElementException : Default Value - 0 (If you don't define implicit wait)
+Fluent Wait :  ElementNotVisibleException
+Explicit Wait : Throws WebDriverTimeOut exception : Default TimeOut : .5 Secs
+
+Methods in Explicit Wait :
+a). visibilityOfElementLocated(WebElement)
+b). invisibilityOfElementLocated(WebElement)
+c). elementToBeClickable(WebElement)
+c). elementToBeSelected(WebElement)
+
+11. BrokenLinks in webPage
+Ans. 1. Get total links using findElements and print the size.
+2. Use for loop and take the attribute using String as "href" like allLinks.get(i).getAttribute("href") and store it in String url.
+3. Pass the URL in method : verifyURL(url);
+4. Create the method by creating object of URL class and casting HttpURLConnection to it.
+5. Use method openConnection() --> connect() --> getResponseCode()
+
+12. Upload a file in Selenium?
+Ans. Using AutoIT tool
+1. Download AutoIT tool and its editor.
+2. Use three methods : ControlFocus,ControlSetText,Click in the editor an save with extension .au3
+3. Complie the editor file to make it .exe file and call in java using Runtime class
+4. Runtime.getRuntime().exec("Path of editor file")
+
+13. Scroll in Selenium ?
+Ans. Using JavaScriptExecutor and casting the object of driver reference to JavaScriptExecutor as methods are available in JavaScriptExecutor
+JavaScriptExecutor jse = (JavaScriptExecutor)d;
+jse.executeScript("window.scrollTo(1200,1200)") : This will do scroll down. Put (-ve) before the coordinates if you want to scroll up after scrolling down.
+
+
+14. How to take screenshot in Selenium?
+Ans. TakesScreenshot ts = (TakesScreenshot)d;  //Casting the driver object to TakesScreenshot class
+File src = ts.getScreenshotAs(OutputType.File);
+FileUtils.copyFile(src,new File("Path of the file.png"));
+
+or
+
+File src = ((TakesScreenshot)d).getScreenshotAs(OutputType.File);
+
+15. Read/Write operation using Excel ?
+Ans. 
+
+16. Different types of xpaths :
+Ans. 
+Example (Used in Point 4) : <input type="password" name="password" onkeyup="validatepassword();" onblur="validatepassword();"> and lets assume text is "Practicing Xpaths"
+
+1. //tagName[@Attribute='value']; : Basic
+2. //tagName[@Attribute='value' and @Attribute='value' and @Attribute='value']; : Using AND condition
+3. //tagName[@Attribute='value' or @Attribute='value']; : Using OR condition
+4. //input[contains(@type,'ssw') and starts-with(@type,'p') and not(contains(@type,'z'))] : Combination of and,or and not
+5. //tagName[contains(@Attribute,'value')]; : Using contains() method
+6. //tagName[contains(text(),'Practicing Xpaths')]; : Using contains() along with text()
+7. //tagName[starts-with(@Attribute,'value')]; : Using starts-with() method
+8. //tagName[text()='value']; : Using text() method.
+9. //td[@align='center']//child::img[1]	
+10. //td[@align='center']//ancestor::table
+11. //tagName[ends-with(@Attribute,'value')]; : Using ends-with() method
+
+//a[text()='test2 test2']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']
+
+1. ancestor
+2. parent
+3. child
+4. sibling
+5. following, following-sibling
+6. preceding, preceding-sibling
+7. descendant
+
+17. Common exceptions in Selenium ?
+Ans. 
+1. NoSuchFrameException
+2. NoSuchWindowException
+3. NoSuchElementException
+4. WebDriver exception
+5. TimeOut Exception
+6. NoAlertPresentException
+
+Refer : http://www.softwaretestingstudio.com/common-exceptions-selenium-webdriver/
+
+18. WebDriver architecure ?
+Ans. It has four components :
+1. Selenium Library/Languages(Java,Perl,Python,Ruby,C#)
+2. JSON(Java Script Object Notation) Wire protocol to send the information to browser driver like firefoxdriver, chromedriver etc.
+3. Browser drivers like FirefoxDriver, ChromeDriver,OperaDriver etc
+4. Browsers like Firefox Browser, chrome , Internet, Safari
+
+19. How to validate the multiple inline error messages in a webpage?
+Ans. 
+ 
+******************** TestNG **********************************************************************************************************************
+
+1. Annotations main sequence : @BeforeMethod --> @Test --> @AfterMethod
+Note : BeforeMethod/AfterMethod is executed after every @Test annotations.
+Note : @CacheLookup : To improve the script performance by storing/caching the webelements, @FindBy(xpath,class,id="")
+
+
+2. Complete Sequence : @BeforeSuite @BeforeTest @BeforeClass @BeforeMethod @Test @AfterMethod @AfterClass @AfterTest @AfterSuite
+
+3. KeyWords : @Test(priority=1,groups={"Title"},dependsOnMethods={"MethodName"},dependsOnGroups={"groupA"},invocationCount=10,alwaysRun=true)
+Note : 
+If a method is written without priority : On the basis of alphabetical order, it will be executed.
+If a method has same priority : Then it will look for alphabetical order of those test methods
+If a method has non prioritised and prioritised method : Then, first non prioritised method with alphabetical sequence and then prioritised one. 
+
+4. invocationCount : No. of times we want to run the method in @Test annotation.
+
+5. Assert.assertEquals(driver.getTitle(),"Google","Title not matching");
+
+6. How to use parameterisation using testNG?
+Ans. One of the way is to use @Parameters annotation and pass the attribute name from testNG.xml file. These are known as environment variables defined in TestNG.xml file
+Example :
+@Test
+@Parameters({"url","username","password"})
+public void exampleParameters(String url,String username,String password){
+	driver.get(url);
+	driver.findElement(By.xpath("")).sendKeys(username);
+	driver.findElement(By.xpath("")).sendKeys(password);
+}
+testNG.xml File sample :
+<parameter name="url" value="http--"/>
+<parameter name ="username" value="akshay"/>
+<parameter name = "password" value="admin@123"/>
+
+7. DataProvider annotation in TestNG?
+Ans. @DataProvider(name = "login")
+public object[][] login(){
+	Object[][] result = new Object[5][1];
+	result[0][0] = "username";
+	result[0][1] = "password";
+	return result;
+}
+
+or
+
+@DataProvider(name="Login")
+public object[][] login(){
+	return new Object[][]{
+		{"mercury","mercury"},
+		{"mercury123","mercury123"},
+	};
+}
+
+@Test(dataProvider="login")
+public void testLogin(String name,String password){
+	driver.findElement(By.xpath("")).sendKeys(name);
+	driver.findElement(By.xpath("")).sendKeys(password);
+}
+
+
+8. Difference between Soft and Hard Assertion?
+Ans. SoftAssertion : Will go to next statement even if Assertion fails : In the end use softAssert.assertAll() to get a list of all soft assertions.
+Hard : Will terminate the program there itself if assertion fails.
+We get AssertionException if any assertion fails.
+
+9. We can tell TestNG to avoid any exception passing it as an attribute in @Test annotation method
+Ex : @Test
+public void test(expectedException=ElementNotFoundException){}
+
+10. How to do parallel testing in TestNG?
+Ans. Using parallel attribute in testNG file
+<suite name="SmokeSuite" parallel="methods/classes/instance" thread-count="5"> : Threadcount : no of browsers to execute the test.
+
+11. Customised reports in TestNG?
+Ans. Using iTestListener/iSuiteListener/iReporter interface.
+a). Create a class which implements any of the above interface and define the unimplemented methods of these interfaces.
+b). iTestListener : onStart(), onFinish(), onTestSuccess(), onTestFailure(), onTestSkipped(), onTestFailedButWithinSuccessPercentage()
+c). iSuiteListener : onStart(), onFinish()
+d). iReporter : generateReport()
+e). iRetryAnalyzer : retry() : To run the failed test cases
+
+12. How will you run the failed test/Retry logic in TestNG?
+Ans. Using iRetryAnalyzer() interface and override its method and pass the class name in TestNG xml or put it in @Test.
+Abstract method of this interface : retry()
+Similarly there is one more interface called "iAnnotationTranformer" which is used at run time and apply retry logic on every test case if defined in testng.xml file.
+
+13. Cross Browser testing in Selenium?
+Ans. Using @Parameters annotation
+https://www.guru99.com/cross-browser-testing-using-selenium.html
+
+14. Assert Methods
+Ans. Main methods are below :
+1. Assert.assertEquals(actual,expected);
+2. Assert.assertEquals(actual,expected,"Error message")
+3. Assert.assertTrue(condition);
+4. Assert.assertFalse(condition);
+5. Assert.assertTrue(condition,message);
+6. Assert.assertFalse(condition,message);
+
+15. testNG.xml sample file with Parameters and Listeners added?
+Ans. 
+<suite name="Sanity Suite">
+
+<listeners>
+	<listener class-name = com.android.package.listenerclass>
+</listeners>
+
+	<test name = "Main test">
+	<parameter name="userNAme" value="Akshay">
+	<parameter name = "password"> value ="akshay">
+		<classes>
+			<class name = "com.android.packageName.className">
+			<class name = "com.android.packageName.className">
+		</classes>
+	</test>
+</suite>
+
+************** API Testing **************************************************************************************************************
+
+API is the list of methods and classes exposed by that application which can be used by other application to use their functionalities. Eg. Gson, Jackson, Apache Commons,etc
+
+Webservice is the type of API over HTTP. E.g Google, facebook, twitter’s webservice to use the login service for authenticating and signing into other application.
+
+
+1. HTTP Metods :
+Ans.
+1. GET : To get specified resource without passing body. 
+2. POST : The create resource by passing body.
+3. PUT : To replace/update resource by passing body. (Complete update of resource unlike Patch which is Partial modification of resource)
+4. DELETE : To delete specified resource.
+5. OPTIONS : To describe the communication options for the target resource.
+6. CONNECT : To start the two-way communications with the resource and can be used to access websites that uses SSL.
+7. TRACE : For debugging and testing purposes. It echo's back input to the user.
+8. PATCH : To apply the partial modification to a resource.
+9. HEAD : Same as GET, but transfers the status line and header section only.
+
+2. HTTP Status codes
+Ans. 2xx : Success , 3xx : Redirection, 4xx : Client Error, 5xx : Server error
+200 : OK		  : With GET request
+201 : Created     : With POST/PUT request
+204 : No content  : With DELETE request
+400 : Bad Request
+401 : Unauthorised : Authentication error 
+402 : Payment required : Paid service
+403 : Forbidden : Authorised error(Need permissions/privileges)The request has been refused. See the accompanying message for the specific reason (most likely for exceeding rate limit).
+404 : Not found
+409 : Conflict
+500 : Internal Server Error
+502 : BAD GATEWAY : The service is down or being upgraded. Try again later.
+503 : SERVICE UNAVAILABLE: : The service is up, but overloaded with requests. Try again later.
+504 : GATEWAY TIMEOUT : Servers are up, but the request couldn’t be serviced due to some failure within our stack. Try again later.
+
+3. What does Header represents in API call?
+Ans. Header represents the extra information returned by the server like content type etc. It is mentioned always in Key-value pair.
+
+
+4. What all things to be verified in API testing while making a web-service call?
+Ans. 1. HTTP status code returned by the server.
+2. Content of the header
+3. Content of the body.
+ 
+5. How to validate the response status code using Rest Assured? //Ref : http://toolsqa.com/rest-assured/validate-response-status-code-using-rest-assured/
+Ans : Response from HTTP call methods (Get,POST,PUT): The first line returned by the server is Status line which has three substrings : "HTTP/1.1 200 OK"
+To get all info : Response.getStatusLine() : Response is an interface which has many abstract methods.
+1. HTTP protocol version 
+2. HTTP status code : Response.getStatusCode();
+3. Status code's string value
+
+6. How to validate response header using Rest Assured ?  //Ref : http://toolsqa.com/rest-assured/validate-response-header-using-rest-assured/
+Ans. Response interface has methods for getting headers as well.
+1. To get all headers : Response.getHeaders() or Response.headers() : Returns all headers and can be iterated using For each loop
+Example : Headers allheaders = Response.headers(); //Headers is a class
+for(Headers header : allheaders){
+	System.out.println("Header Key: "+header.getName()+" Header Value: "+header.getValue());
+}
+2. To get specific header : Response.getHeader(String headerName) or Response.header(String headerName) : Returns the specific header name as a string
+Example : String headerName = Response.getHeader("Content-Type");
+String headerName = Response.getHeader("Server");
+String headerName = Response.getHeader("Content-Encoding");
+
+7. How to validate the response body using Rest Assured?
+Ans. Similar way like validating the status code and header. Response interface has methods for validating the body as well.
+1. To get the body : Response.body() or Response.getBody() //Returns the body and this can be converted in String like Response.body().toString();
+2. To validate the exact node from JSON body : Response.JsonPath(); //Returns the JsonPath object
+Example : JsonPath jsonPath = Response.JsonPath();
+String city = jsonPath.get("City")  // Will give result for this : { "City" : "Delhi" }
+
+8. How to create a JSON body for making POST request if content type is JSON?
+Ans. JSONObject json = new JSONObject();
+//Add key-value pairs using Put method like Map interface
+json.put("Name","Akshay Jain");
+json.put("FirstName","Akshay");
+json.put("LastName","Jain");
+
+9. Deserializing JSON response body to a class? //Ref : http://toolsqa.com/rest-assured/deserialize-json-response-class-rest-assured/
+Ans. To deserialize the JSON body and do the assertion. Below steps :
+1. Create a class which has same no. of variables as the number of nodes returned by the server in Response body. 
+2. Use Response method as : Response.getBody().as(SampleClass.class) //SampleClass will have same no. of variables as nodes.
+3. Above code will copy the node value of JSON into variable of SampleClass and then do the assertion.
+
+10. Authentication and Authorizaton in Rest Assured?
+Ans. There is a header called "Authorization" where user has to pass the username/password in some form to access the private resource while making a webservice call. Authorization is something where user gets authorized by providing the authentication using the header as "Authorization"
+Example : Private Resource API which would need Authentication and fails with 401 (Unauthorized)if webservice is made directly without passing the authentication.
+Endpoint: http://restapi.demoqa.com/authentication/CheckForAuthentication
+Username/Password : ToolsQA/TestPassword
+Refer to PostMan in Mac : Learning API's : Have imported the Tools QA private resource and added the basic auth.
+
+11. POST v/s PUT?
+Ans. 
+1. Post is Cacheable if server sends the response in header. PUT is not cacheable
+2. Post is not idempotent. PUT is idempotent.
+3. Post creates the resource. PUT updates the resource.
+4. Multiple POST req end up with diff result. Multiple PUT req will be same result.
+
+12. REST v/s SOAP?
+Ans. 
+1. Soap is a protocol. Rest is an architectural pattern.
+2. Soap uses WSDL. Rest can communicate using xml, JSON, plain text.
+3. Soap can't use Rest because its a protocol. Rest can use Soap as the underline protocol because its a pattern.
+4. Soap's java API is JAX-WS. Rest's Java api is JAX-RS
+5. Soap needs more bandwidth. Rest needs less.
+
+
+
+******************** String & Collections ********************************************************************************************
+
+1. Why strings are immutable?
+Ans. Strings are immutable bcz it uses the concept of String literal. Lets say there are 5 references variables and all refers to one object and if one reference variable changes
+the value of the object then it will be affected to all the reference variables. Thats why its immutable.
+Once you create a String object lets say String a = "Akshay",  JVM checks in the string constant pool if this object is present or not. If not, then it wil create a new object.
+
+Example : When we create a string in java like String s1="hello"; then an object will be created in string pool(hello) and s1 will be pointing to hello.Now if again we do String s2="hello"; then another object will not be created but s2 will point to hello because JVM will first check if the same object is present in string pool or not.If not present then only a new one is created else not.
+Now if suppose java allows string mutable then if we change s1 to hello world then s2 value will also be hello world so java String is immutable.
+
+2. String methods
+Ans. 
+1. substring(startIndex,EndIndex) : startIndex is inclusive and EndIndex is exclusive
+2. substring(StartIndex)
+3. equals(String) : Checks for the content as well as case
+4. equalsIgnoreCase(String) : Ignore case and checks just the content.
+5. == operator : returns true/false if both the string object refers to same reference.
+6. compareTo(String) : returns 0,1,-1 lexicographically.
+7. indexOf(String str), indexOf(char ch), indexOf(String str, int fromIndex), indexOf(char ch, int from Index) : returns the index if present else -1 (Ref : https://beginnersbook.com/2013/12/java-string-indexof-method-example/)
+Example :   
+       String str1 = new String("This is a BeginnersBook tutorial");
+       String str2 = new String("Beginners");
+       System.out.println(str1.indexOf(str2)) : 10 //Beginners B starts from 10th index
+       System.out.println(str1.indexOf('B',15)) : 19 //Book B starts at 19th index. Since, we have mentioned as after 15th index
+       System.out.println(str1.indexOf("Iam")) : -1 //Doesn't have any substring
+8. lastIndexOf() : Has all same variations like indexOf() : Difference is it returns the last index rather indexOf() returns first index. Both returns -1 if not found.
+       
+       
+3. Difference between List, Set and Map?
+Ans. 1. Duplicity : List-Yes, Set-No, Map : No duplicate Keys but values.
+2. Order : List-Maintains, Set-No(From the implementing classes), Map: No(From the implementing classes)
+3. Null : List-Yes(Any no), Set- Single null value at most, Map-One null key at most but many values
+4. Classes : List-(ArrayList, LinkedList,etc), Set-(HashSet, LinkedHashSet,TreeSet), Map-(HashMap,LinkedHashMap,TreeMap)
+
+4. Collection Hierarchy?
+Ans. Iterable -> Collection
+List -------------- Set -----------------------Queue
+ArrayList         HashSet						PriorityQueue
+LinkedList		LinkedHashSet					Deque(I) --> ArrayDeque
+Vector			SortedSet(I) --> TreeSet
+  |
+Stack
+
+And Map which is a part of collection framework but doesn't extend collection interface. Its in other branch of collection interface.
+
+Map(I) -- HashMap, LinkedHashMap, Hashtable : All classes implements Map interface
+ | (Extends)
+SortedMap(I) -- TreeMap
+
+
+5. Difference between HashMap and HashTable?
+Ans. 
+HashMap                                                      Hashtable
+1. Non Synchronized						                    Synchronized
+2. Allows one null key and many null values                 No null key or values
+3. Faster due to non thread safe							Slower due to thread safe
+4. Can be synchronized using synchronizedMap method		Can't be unshynchronized 
+5. Traversed by Iterator									Traversed by Iterator and Enumerator	
+
+6. String v/s StringBuffer v/s StringBuilder
+Ans. String : Immutable, Rest are Mutable, can be shared with multiple threads freely being immutable
+StringBuffer : Synchronized, ThreadSafe, Slow
+StringBuilder : Non Synchronized, Not Thread Safe, fast
+
+(a)To convert StringBuffer/Builder to String : Use .toString() method
+(b)To convert String to Buffer/Builder : 
+String s1 = "Akshay";
+StringBuffer sb1 = new StringBuffer(s1);
+StringBuilder sb2 = new StringBuilder(s1);
+(c)To convert StringBuffer to StringBuilder or vice-versa. First convert it to String using .toString() method and then to respective type.
+
+7. Iterator and ListIterator and Enumerator?
+Ans.
+Topics 					Iterator				ListIterator									Enumerator
+Direction 				Forward					Forward and Backward							Forward
+Objects Traversal		List, Map, Set			Only List Interface								Legacy classes like vector,stack,Hastable
+Retrieve Index			No						Yes using nextIndex() and previousIndex()		only available methods are hasMoreElements(), hasNext()
+Operations				Only remove				add,remove,replace using add() and set()		No operations only traversal
+
+8. Comparable and Comparator?
+Ans.
+Topics						Comparable										           Comparator
+SortingSequence 		Single Sorting Seq,Using one element like id,name etc			Multiple Sorting seq, using multiple elements like name,id,price etc.
+Methods						compareTo()													compare()
+Package						java.lang													java.util
+Sort						Collections.sort(List)										Collections.sort(List,Comparator)
+
+
+9. Autoboxing and Unboxing ?
+Ans. Conversion of primitive datatype to Wrapper class is Autoboxing and opposite of this is unboxing means from wrapper to primitive.
+Example :
+Character c = 'c' //Auto-boxing : Primitive to Character Wrapper class
+char ch = c       //Unboxing : Wrapper to Primitive datatypes
+
+10. Wrapper classes & its methods?
+Ans. Since java is not 100% object oriented programming language due to its primitive data types. They have a solution like wrapper classes 
+where the datatypes can be converted to a wrapper class and will be treated as an wrapper class object to make it 100% object oriented.
+Primitive : Non primitive (Wrapper class)
+byte, short, int, long, float, double, char : Byte,Short,Int,Long,Float,Double,Character
+1byte, 2byte, 4byte, 8byte, 4byte, 8byte, 2byte
+
+Methods :
+int a = Integer.parseInt("123") //Converting from String to int
+float b = Float.parseFloat("123") //Converting from String to float
+
+11. Memory allocation in Java?
+Ans. JVM divides the memory as below :
+1. Stack : Local variables/Methods/Ref variables
+2. Heap : Instance variables/Objects/Ref variables
+3. Static : Static data/methods
+4. Code : bytecode
+for ref : https://www.guru99.com/java-stack-heap.html
+
+12. Abstract class v/s Interface?
+Ans. Interface 													Abstract class
+1. Only abtstract methods										Both abstract and non abstract methods
+2. Full abstraction												Partial abstraction
+3. Static and final member variables by default					Can have static/non static, final/non-final member variables
+4. Public methods by default									Can be public, private,protected,default
+5. Can be implemented using "implements"						Can be extended using "extends"
+6. Supports Multiple inheritance								Doesn't support
+7. Keyword "interface"											Keyword "abstract"
+8. No constructor												Can have constructor								
+
+Since Java8 interface can have default and static methods which can have body.
+
+13. Synchronized Method and Synchronized Block. What is the need of Synchronization in Multithreading?
+Ans. Synchronization is required when multiple threads try to access the shared resource/method at the same time. So, to avoid conflict synchronization should be used either as a method or a block where
+synchronization needs to be done to avoid conflict so that only one thread can use the resource/method/part of code at a time.
+Example : If there is a joint account where acc bal is 1000. One customer/thread tries to withdraw money as 600. At the same time other customer/thread tries to withdraw money like 600 at the same time
+which can't happen since there is just 1000 rps available in account and by the time second thread puts the request, acc bal is not updated so both of their request becomes true. So, conflict happens when cust tries to withdraw money greater than acc bal. To avoid this, we use synchronization.
+
+14. Garbage collection in Java?
+Ans. Example : Student s1 = new Student()
+We have created an object of Student class. Now, JVM does the garbage collection for the objects which has no reference or no longer needed.
+Now s1 points to the objects but if we do s1 = null so now s1 doesn't point to Student object and it is eligible for garbage collection. 
+we can explicitly call JVM for garbage collection using System.gc() but there is no gurantee that JVM will do since its just like a request. JVM does it periodically.
+
+15. Use of finalize() in Java?
+Ans. It is a method present in super class of all class which is Object class. It is called by garbage collector before releasing the memory for the object which doesn't have any reference. 
+This is used by subclass if overridden to perform any clean up activity before object is garbage collected.
+
+16. Final v/s Finally v/s Finalize()?https://www.geekhttps://www.geeksforgeeks.org/myth-file-name-class-name-java/sforgeeks.org/myth-file-name-class-name-java/
+Ans. Final is a keyword which is used with variable(value can't change), method(can't be overridden), class(can't be extended)
+Finally is a block which gets executed always and must be followed by either try or catch block.
+Finalize() is a method present in object class called by garbage collector before garbage collection.
+
+17. Custom exception in java?
+Ans. Create a class that should end with Exception like CustomClassException extending it to Exception class and create a constructor inside and call super method.
+Ex. class CustomClassException extends Exception{
+	public CustomClassException(String message){
+		super(message);
+	}
+}
+
+18. Memory leak in java?
+Ans. The objects which are no longer needed and unintentionally has references create a potential memory leak. GC detects the objects which doesn't have any reference. It checks for unreferenced objects not unused objects.
+Refer :
+https://dzone.com/articles/memory-leak-andjava-code
+https://www.youtube.com/watch?v=iFr1cvwhfbw (ATM example) 
+
+19. Can Java file name is different than the class Name ?
+Ans. Yes, only if there is not any public class in the file. If its there than filename and class Name has to be same. Else will give the compile time error.
+Refer : https://www.geeksforgeeks.org/myth-file-name-class-name-java/https://www.geeksforgeeks.org/myth-file-name-class-name-java/
+
+20. JDBC connection?
+Ans. 5 steps involved as below :
+1. Register the driver class : Use forName() method
+2. Create the connection : Use getConnection() method
+3. Create statement : Use createStatement() method
+4. Executing Queries : Use executeQuery() method
+5. Close Connection : Use close() method
+
+21. Why is a char array i.e char[] preferred over String to store a password?
+A. String is immutable in Java and stored in the String pool. Once it is created it stays in the pool until garbage collected. This has greater risk of 1) someone producing a memory dump to find the password 2) the application inadvertently logging password as a readable string.
+
+If you use a char[] instead, you can override it with some dummy values once done with it, and also logging the char[] like “[C@5829428e” is not as bad as logging it as String “password123”.
+
+
+Java Interview Question :
+1. https://www.geeksforgeeks.org/commonly-asked-java-programming-interview-questions-set-1/
+2. https://www.geeksforgeeks.org/commonly-asked-java-programming-interview-questions-set-2/
+3. https://www.javatpoint.com/corejava-interview-questions#corebasicsinterview
+
+Java Interview Questions on Private Modifier :
+1. https://javaconceptoftheday.com/java-interview-questions-on-modifiers/
+2. https://javaconceptoftheday.com/java-practice-questions-on-access-modifiers/
+
+******************** GIT Version Control System ********************************************************************************************
+
+GIT : It is divided in three directories mainly:
+1. Local Repository : Where user makes the changes/works on the project.
+2. Staging Area : Where user keeps track of the changes which will be pushed to the remote repository.
+3. Remote Repository : Every user checks in the code, which is remote repository.
+
+1. To clone the working existing git repository?
+Ans. git clone <repo-URL>
+
+2. To add file to Staging area from Local repository?
+Ans. git add <file-name> //This will add the file to staging area
+git add* // To add all changed files to staging.
+
+3. To remove the file from staging area as still some changes are left out before committing?
+Ans. git rm -cached<file-name>
+git rm*  //To remove all staged files
+
+4. To show the status of remote, local and staging repository?
+Ans. git status
+
+5. To commit the files for pushing to remote repository?
+Ans. git commit -m "Added new files"
+
+6. To push changes to remote ?
+Ans. git push origin <branchName>
+
+7. Git reset commands ?
+Ans. 
+1. git reset : Reset staging area and leaves the working directory unchanged.
+2. git reset --hard : Reset staging and working directory.
+3. git reset <commit> : Reset staging area to last commit and leaves the working directory unchanged.
+4. git reset --hard <commit> : Reset staginga and working directory area to last commit.
+
+8. To pull the latest changes ?
+Ans. git pull
+
+9. Difference between git pull and git fetch?
+Ans. git pull = git fetch + git merge
+git fetch : Pulls the changes in the new branch in local and then git merge is required to reflect the changes in local repo.
+
+10. What is git stash?
+Ans. If you need to switch branches and wants to save the modified files from current branch. Use git stash to save it.
+
+11. To undo the pushed changes to remote ?
+Ans. git commit --amend
+********************** File Handling **************************************************************************************************
+
+File excel = new File("FilePath");
+FileInputStream fis = new FileInputStream(excel);
+HSSFWorkbook wb = new HSSFWorkbook(fis);
+HSSFWorksheet ws = wb.getSheet("SheetName");
+int rowNum = ws.getLastRowNum() +1 as it starts from 0  or     int rowNum = ws.getLastRowNum()-ws.getFirstRowNum();
+int colNum = ws.getRow(0).getLastCellNum();
+for(int i=; i<rowNum; i++){
+	Row row = ws.getRow(i);
+	for(int j=0; j<ws.getLastCellNum(); j++){
+		System.out.print(row.getCell(j).getStringCellValue()+"||");
+	}
+}
+
+**********************************************************************************************************************************************
+
+Backend Information :
+
+1. Software Architecture ?
+Ans. Watch this video to refresh : https://youtu.be/ccOzcjHQVos
+Presentation Layer (Web Layer) : Where the actions are performed on web pages. Lets say GMAIL to enter UN and PWD
+Application Layer (Business Layer/Logical Layer) : Which understands the request and pass the information to DB, fetches results and shows it on Presentation layer 
+DB Layer : To process the requests received from Business layer
+
+1 Tier : Where all three layers are present at client end. Ex : MS office, MP3 player : All available on system
+2. 2 Tier : Where client manages Presentation and Business Layer and DB layer is separate
+3. 3 Tier : Where presentation, business and DB layer all are deployed on diff servers.
+
+
+********************************************************************************************************************************************** 
+
+SQL :
+
+1. Joins
+Ans. https://www.softwaretestingclass.com/sql-joins/
+
+2. Sub-Queries
+Ans. https://www.softwaretestingclass.com/sql-sub-queries/
+
+3. Group-By
+Ans. https://www.softwaretestingclass.com/sql-group-by-clause/
+
+4. Union
+Ans. https://www.softwaretestingclass.com/sql-union/
+
+5. Current Date
+Ans. SELECT GetDate(); 
+
+
+********************************************************************************************************************************************** 
+
+2. https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/
+
+********************************************************************************************************************************************** 
+
+Complexities :
+
+https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/
+
+**********************************************************************************************************************************************
+
+Constructor Inheritance : Constructor Inheritance : http://www.dailyfreecode.com/code/constructor-inheritance-super-keyword-1397.aspx
+
+***********************************************************************************************************************************************
+
+Collections : https://beginnersbook.com/2015/01/difference-between-list-set-and-map-in-java/
+
+***********************************************************************************************************************************************
+
+
+Java Interview : https://www.studytonight.com/flashcards/Java/#
