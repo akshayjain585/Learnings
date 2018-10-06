@@ -14,7 +14,6 @@ public class ArrayRotation {
 		int t=0; int b = m-1; int l=0 ; int r = n-1;  
 		
 		//t = top row index, b = bottom row index, l = first column index, r = last column index
-		//m = no. of rows, n = no. of columns
 
 		int dir =0;
 		while(t<=b && l<=r){
