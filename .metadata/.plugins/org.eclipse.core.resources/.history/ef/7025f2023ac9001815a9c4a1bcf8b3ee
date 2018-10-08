@@ -1,0 +1,18 @@
+package searching;
+
+public class CountOccurrencesOfNo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] list = {0,0,0,0,2,3,3,3,3,3,3,3,3,3,3,6,6,7};
+		int key = 0;
+		
+		FirstLastOccurrenceInBinarySearch fl = new FirstLastOccurrenceInBinarySearch();
+		int firstOcc = fl.firstOccurrenceBS(list, key);
+		
+		
+
+	}
+
+}

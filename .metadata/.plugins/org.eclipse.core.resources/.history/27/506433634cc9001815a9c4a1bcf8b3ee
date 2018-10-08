@@ -1,0 +1,37 @@
+/*
+ * 1. Trick is to find the minimum element in an array and that would be the number of times array is rotated.
+ * Example : {10,11,12,13,2,3,4,5}
+ * Ans. 2 is the minimum element at index 4, so the arrayy is rotated 4 number of times.
+ * Actual Array : {2,3,4,5,10,11,12,13} : And if its rotated 4 times, it would be {10,11,12,13,2,3,4,5}
+ *
+ *Solution 1 : Use linear search and find minimum element and return the index. O(n)
+ *Solution 2 : Use Binary Search and find minimum element and return the index. O(Logn)
+ *
+ */
+
+
+package searching;
+
+public class ArrayRotatedCount {
+	
+	public static int rotatedCountLS(int[] list){
+		int min = list[0];
+		int minIndex = 0;
+		for(int i=1; i<list.length; i++){
+			if(list[i]<min){
+				min = list[i];
+				minIndex = i;
+			}
+		}
+		return minIndex;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[] list = {10,11,12,13,2,3,4,5};
+		System.out.println(rotatedCountLS(list));
+		
+	}
+
+}

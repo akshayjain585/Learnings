@@ -919,3 +919,11 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.beanshell
 2018-10-02 21:24:22,973 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
 2018-10-02 21:24:22,983 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-10-02 21:24:22,992 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\AutomationFrameworkCoaching\src\test\resources
+2018-10-06 11:56:44,193 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-10-06 11:57:02,002 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/json/json/20090211/json-20090211.pom
+2018-10-06 11:57:13,546 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/testng/testng/6.8/testng-6.8.pom
+2018-10-06 11:57:23,588 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/poi/poi/3.16/poi-3.16.pom
+2018-10-06 11:57:33,618 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/poi/poi-ooxml/3.16/poi-ooxml-3.16.pom
+2018-10-06 11:57:43,653 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-java/2.53.0/selenium-java-2.53.0.pom
+2018-10-06 11:57:53,769 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom
+2018-10-06 11:58:03,932 [Worker-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/io/rest-assured/rest-assured/3.0.0/rest-assured-3.0.0.pom
