@@ -1,4 +1,5 @@
 /*
+ * Question : Find out the rotated count of circular sorted array?
  * 1. Trick is to find the minimum element in an array and that would be the number of times array is rotated.
  * Example : {10,11,12,13,2,3,4,5}
  * Ans. 2 is the minimum element at index 4, so the array is rotated 4 number of times.
