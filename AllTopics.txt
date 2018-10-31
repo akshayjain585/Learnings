@@ -311,13 +311,29 @@ driver.get(http://username:password@URL);
 
 
 10. Waits :
-Implicit Wait : driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+Implicit Wait : driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS); : Will come out earlier than 20 secs if element is found within 5 seconds. So its a dynamic wait like explicit wait.
 Explicit Wait : WebDriverWait wait = new WebDriverWait(driver,20);
 WebElement link = wait.until(ExpectedConditions.visibilityOfElementLocated(driver.findElement(By.xpath("//a"))));
 FluentWait : Wait wait = new FluentWait(driver).withtimeout(20,SECONDS).pollingevery(5,SECONDS).ignore(Exception.class); 
-Implicit Wait : Throws NoSuchElementException : Default Value - 0 (If you don't define implicit wait)
+
+Implicit Wait : Throws NoSuchElementException : Default Value - 0 (If you don't define implicit wait) and it polls the DOM(Document Object Model) every 500ms means twice in a second to find the element on a webpage. 
+Therefore, implicit wait of 10 second will let driver to search for the element 20 times if its not found and then throw the NoSuchElementException.
+
 Fluent Wait :  ElementNotVisibleException
-Explicit Wait : Throws WebDriverTimeOut exception : Default TimeOut : .5 Secs
+
+Explicit Wait : Throws WebDriverTimeOut exception : Default TimeOut : .5 Secs : Available with WebDriverWait with some expectedConditions
+Note : We can create our own Explicit wait method for sendkeys,click on a webelement as below :
+public static sendKeys(WebDriver driver, WebElement element, int timeout, String value){		//Creating our own sendkeys method to use Explicit Wait
+	new WebdriverWait(driver,timeout).
+	until(ExpectedConditions.visibilityOf(element));
+	element.sendKeys(value);	//using Selenium sendkeys method here
+}
+
+public static clickOn(WebDriver driver,WebElement element, int timeout){
+	new WebDriverWait(driver,timeout).
+	until(ExpectedConditions.elementToBeClickable(element));
+	element.click();	//Calling Selenium click method now after using explicit wait to achieve synchronization
+}
 
 Methods in Explicit Wait :
 a). visibilityOfElementLocated(WebElement)
