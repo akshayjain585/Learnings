@@ -372,6 +372,7 @@ Example (Used in Point 4) : <input type="password" name="password" onkeyup="vali
 9. //td[@align='center']//child::img[1]	
 10. //td[@align='center']//ancestor::table
 11. //tagName[ends-with(@Attribute,'value')]; : Using ends-with() method
+12. (//tagName[@Attribute='Value'])[2] : Second Index of WebElement
 
 //a[text()='test2 test2']//parent::td[@class='datalistrow']//preceding-sibling::td[@class='datalistrow']//input[@name='contact_id']
 
@@ -403,6 +404,11 @@ Ans. It has four components :
 
 19. How to validate the multiple inline error messages in a webpage?
 Ans. 
+
+20. Synchornization in Selenium : Customized method to handle?
+Ans. http://learn-automation.com/best-way-to-handle-synchronization-in-selenium-webdriver/
+http://learn-automation.com/how-to-solve-stale-element-reference-exception-in-selenium-webdriver/
+
  
 ******************** TestNG **********************************************************************************************************************
 
@@ -861,7 +867,56 @@ git fetch : Pulls the changes in the new branch in local and then git merge is r
 Ans. If you need to switch branches and wants to save the modified files from current branch. Use git stash to save it.
 
 11. To undo the pushed changes to remote ?
-Ans. git commit --amend
+Ans. git commit --amend 
+
+
+********************************************** Maven ******************************************************************************
+
+1. What is Maven ?
+Ans. Its a build Automation tool for the project developed by Apache.
+
+2. What does it do, its advantages and what is its lifecycle?
+Ans. It builds the project and the advantage is to download the required Jar's of the project by just mentioning it in the form of dependencies in POM(Project Object Model).xml file.
+LifeCycle :
+1. Maven Compile : Uses Maven Compiler (To compile all Java, class files)
+2. Maven Test : Uses Maven Surefire plugin to run all test cases
+3. Maven package : Source plugin which generates the JAR's,WAR's,EAR's files
+Therefore, Maven is a build tool which compiles,Test and generates the resource file in the form of JAR's,WAR's or EAR's file to be used by anyone else.
+
+3. Components of dependencies?
+Ans. GroupID, Artifact, Version No
+
+4. Maven Commands :
+1. mvn clean install : Clean the target folder jar files, Compile the code, Test the code(run the test cases), generate the Jar file (Maven complete lifecycle)
+2. mvn test : Doesn't compile, just run the test cases.
+3. mvn package -DskipTests : Compile and generate the build without executing the Test Cases (Dev's generally do this way to give the build to QA to avoid running all TC's)
+
+5. How to run all Test files using Maven?
+Ans. There are couple of ways to do the same :
+1. Mention Maven plugins in POM.xml file (Complier, surefire and source plugin) and mention the testng.xml file inside the surefire plugin as the configuration file. So, when you do "mvn clean install" it will pick all tests depending on the configuration file given in POM.xml file under surefire plugin which would be a normal testng.xml file.
+2. mvn clean install -DsuiteFile="testng.xml" or if more details are required then use : mvn clean install -Dconfile="..\Properties" -DsuiteFile="testNg.xml"
+
+6. Difference between Maven and ANT?
+Ans.
+			ANT   																		Maven
+1. Need to define the project structure like where to keep the source code, 		1. Maven comes with standard project sturtcure in POM.xml file
+compiled code, test code in Build.xml file											2. Maven has a dependency concept and download Jar's from local or central repository which doesn't need any manual effort.
+2. ANT uses lib to store JAR's which requires manual effort to download
+and change jars.
+3. ANT doesn't have a lifecycle. You need to define targets and dependencies.		3. Maven has a lifecycle which gets executed by "mvn clean install" and does clean, compile, test and packaging of code in JAR, WAR or EAR's.
+4. Its mainly a build tool.															4. Its more than a build tool as a project management tool, can generate reports as well.
+
+
+
+********************** Jenkins **********************************************************************************************
+
+1. What is Jenkins and what does it do ?
+Ans. Jenkins and Hudson are Continues Integration tool, which gives you power to automate your build and deployment process. By using Jenkins or Hudson you can trigger build whenever developer commit code, to see if project is compiling fine, to run unit tests, to create build or even deploy in QA or production environment. 
+Similarly you can have daily build, nightly build or weekly build process established in Jenkins or Hudson
+
+Read more: https://javarevisited.blogspot.com/2015/01/difference-between-maven-ant-jenkins-and-hudson.html#ixzz5VDeCVkYm
+
+
 ********************** File Handling **************************************************************************************************
 
 File excel = new File("FilePath");

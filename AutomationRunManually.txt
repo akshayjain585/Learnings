@@ -1,0 +1,18 @@
+1020511 : 18th sep
+1073435 : 18th Sep
+1073785 : 18th Sep
+1075912 : 18th sep
+1076335 : 18th sep
+1076622 : 18th sep
+1081748 : 18th sep
+1082974 : 18th sep
+
+
+mvn clean install test -Dconfile="..\YCOM_AutoNPR.properties" -DsuiteFile="DailyBugVerification.xml" -Dmaven.test.failure.ignore=true -Ddashboardrun=Hercules_YCOM
+
+YCOM_AutoNPR.properties
+
+
+https://finapp.automainmc.corp.yodlee.com/finapp/10003700/
+
+
