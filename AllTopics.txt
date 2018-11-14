@@ -435,17 +435,47 @@ Note : @CacheLookup : To improve the script performance by storing/caching the w
 
 2. Complete Sequence : @BeforeSuite @BeforeTest @BeforeClass @BeforeMethod @Test @AfterMethod @AfterClass @AfterTest @AfterSuite
 
-3. KeyWords : @Test(priority=1,groups={"Title"},dependsOnMethods={"MethodName"},dependsOnGroups={"groupA"},invocationCount=10,alwaysRun=true)
+3. Difference between @BeforeTest, @BeforeClass and @BeforeMethod annotations in TestNG?
+Ans. Afer understaning the TestNG.xml file, the hirarchy is :
+<suite>
+	<test name = "Sanity">
+		<classes>
+			<class name = "com.android.packageName.className1">
+			<class name = "com.android.packageName.className2">
+		</classes>
+	</test>
+	<test name = "Sanity">
+		<classes>
+			<class name = "com.android.packageName.className1">
+			<class name = "com.android.packageName.className2">
+		</classes>
+	</test>	
+</suite>	
+
+So, <test> tag is wrapped by @BeforeTest and @AfterTest
+    <class> tag is wrapped by @BeforeClass and @AfterClass
+	
+Means, BeforeTest will get executed before test tag once for all the classes mentioned in the test tag. That means, BeforeTest will run once for the testtag "Sanity" once and BeforeClass will run once for the class. Now, as per
+the above testNG.xml file, we have 2 classes in Sanity Test tag. Here, @BeforeTest will run once for the whole Test and @BeforeClass will run once for the first class and again for the second class.
+
+@BeforeSuite : This runs before the suite starts.
+@BeforeTest : This will run once before all the classes mentioned in the test tag mentioned in the TestNG.xml file. If there are multiple Test configfured in TestNG.xml file, it will run for each Test tag mentioned.
+@BeforeClass : This will run once for every class mentioned in the test tag.
+@BeforeMethod: This will run before every @Test annotation mentioned in the class file.
+
+	
+
+4. KeyWords : @Test(priority=1,groups={"Title"},dependsOnMethods={"MethodName"},dependsOnGroups={"groupA"},invocationCount=10,alwaysRun=true)
 Note : 
 If a method is written without priority : On the basis of alphabetical order, it will be executed.
 If a method has same priority : Then it will look for alphabetical order of those test methods
 If a method has non prioritised and prioritised method : Then, first non prioritised method with alphabetical sequence and then prioritised one. 
 
-4. invocationCount : No. of times we want to run the method in @Test annotation.
+5. invocationCount : No. of times we want to run the method in @Test annotation.
 
-5. Assert.assertEquals(driver.getTitle(),"Google","Title not matching");
+6. Assert.assertEquals(driver.getTitle(),"Google","Title not matching");
 
-6. How to use parameterisation using testNG?
+7. How to use parameterisation using testNG?
 Ans. One of the way is to use @Parameters annotation and pass the attribute name from testNG.xml file. These are known as environment variables defined in TestNG.xml file
 Example :
 @Test
@@ -460,7 +490,7 @@ testNG.xml File sample :
 <parameter name ="username" value="akshay"/>
 <parameter name = "password" value="admin@123"/>
 
-7. DataProvider annotation in TestNG?
+8. DataProvider annotation in TestNG?
 Ans. @DataProvider(name = "login")
 public object[][] login(){
 	Object[][] result = new Object[5][1];
@@ -486,20 +516,20 @@ public void testLogin(String name,String password){
 }
 
 
-8. Difference between Soft and Hard Assertion?
+9. Difference between Soft and Hard Assertion?
 Ans. SoftAssertion : Will go to next statement even if Assertion fails : In the end use softAssert.assertAll() to get a list of all soft assertions.
 Hard : Will terminate the program there itself if assertion fails.
 We get AssertionException if any assertion fails.
 
-9. We can tell TestNG to avoid any exception passing it as an attribute in @Test annotation method
+10. We can tell TestNG to avoid any exception passing it as an attribute in @Test annotation method
 Ex : @Test
 public void test(expectedException=ElementNotFoundException){}
 
-10. How to do parallel testing in TestNG?
+11. How to do parallel testing in TestNG?
 Ans. Using parallel attribute in testNG file
 <suite name="SmokeSuite" parallel="methods/classes/instance" thread-count="5"> : Threadcount : no of browsers to execute the test.
 
-11. Customised reports in TestNG?
+12. Customised reports in TestNG?
 Ans. Using iTestListener/iSuiteListener/iReporter interface.
 a). Create a class which implements any of the above interface and define the unimplemented methods of these interfaces.
 b). iTestListener : onStart(), onFinish(), onTestSuccess(), onTestFailure(), onTestSkipped(), onTestFailedButWithinSuccessPercentage()
@@ -507,16 +537,16 @@ c). iSuiteListener : onStart(), onFinish()
 d). iReporter : generateReport()
 e). iRetryAnalyzer : retry() : To run the failed test cases
 
-12. How will you run the failed test/Retry logic in TestNG?
+13. How will you run the failed test/Retry logic in TestNG?
 Ans. Using iRetryAnalyzer() interface and override its method and pass the class name in TestNG xml or put it in @Test.
 Abstract method of this interface : retry()
 Similarly there is one more interface called "iAnnotationTranformer" which is used at run time and apply retry logic on every test case if defined in testng.xml file.
 
-13. Cross Browser testing in Selenium?
+14. Cross Browser testing in Selenium?
 Ans. Using @Parameters annotation
 https://www.guru99.com/cross-browser-testing-using-selenium.html
 
-14. Assert Methods
+15. Assert Methods
 Ans. Main methods are below :
 1. Assert.assertEquals(actual,expected);
 2. Assert.assertEquals(actual,expected,"Error message")
@@ -525,7 +555,7 @@ Ans. Main methods are below :
 5. Assert.assertTrue(condition,message);
 6. Assert.assertFalse(condition,message);
 
-15. testNG.xml sample file with Parameters and Listeners added?
+16. testNG.xml sample file with Parameters and Listeners added?
 Ans. 
 <suite name="Sanity Suite">
 
