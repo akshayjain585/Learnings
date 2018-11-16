@@ -418,6 +418,20 @@ Ans. It has four components :
 3. Browser drivers like FirefoxDriver, ChromeDriver,OperaDriver etc
 4. Browsers like Firefox Browser, chrome , Internet, Safari
 
+WebDriver hierarchy :
+1. SearchContext is the super interface which has only two methods : findElement and findElements
+2. WebDriver is an interface which extends SearchContext interface. WebDriver has many methods like get(String url), close(), quit() etc.
+3. RemoteWebDriver is a fully implemented class which implements WebDriver, JavaScriptExecutor(Interface) and TakeScreenshot(Interface). Fully implemented class means it defined body for all inherited methods.							
+4. Last, we have browser driver classes like FirefoxDriver,ChromeDriver,SafariDriver which extends the RemoteWebDriver class.
+
+WebElement hierarchy :
+1. WebElement is an interface which extends SearchContext and TakesScreenshot interface. It has many useful abstarct methids like click(), sendKeys(), isSelected() etc.
+2. RemoteWebELement is a fully implemented class as it implements WebElement interface. In fact, findElement() and findElements() of SearchContext interface have been defined properly in this class only.
+3. When we search for some element using findElement or findElements() method, a type of RemoteWebElement class is up casted to WebElement. And when we perform any action on webelement like click(), method defined in RemoteWebElemnt class will be executed because of overriding concept.
+
+To see the diagram and understand better, refer the below page :
+Refer : http://makeseleniumeasy.com/2017/04/02/hierarchy-of-selenium-classes-and-interfaces/
+
 19. How to validate the multiple inline error messages in a webpage?
 Ans. 
 
@@ -858,6 +872,19 @@ A. String is immutable in Java and stored in the String pool. Once it is created
 
 If you use a char[] instead, you can override it with some dummy values once done with it, and also logging the char[] like “[C@5829428e” is not as bad as logging it as String “password123”.
 
+22. What is casting?
+Ans. Casting means taking an object of one type and converting it into an another object type is called casting.
+
+23. Upcasting and Downcasting in Java ?
+Ans. Upcasting/Widening is possible in Java and done automatically. For downcasting, we have to typecast the object of one type into another's object type.
+Example :
+WebDriver driver = new FirefoxDriver();, Parent parent = new Child(); //This is upcasting and supported bydefault in Java 
+Here WebDriver is a super interface of every browser driver class like FirefoxDriver,ChromeDriver,SafariDriver etc. This means we are upcasting FirefoxDriver
+class object to WebDriver interface. That means, WebDriver interface reference is holding an object of FirefoxDriver class. This way, we can not call the methods of 
+FirefoxDriver class, only the methods which are overridden by FirefoxDriver class from WebDriver interface will be called. If we take Parent example, this means Parent class reference is 
+holding an object of Child class and only the overridden methods in Child class will be called along with all the methods of Parent class.
+
+FirefoxDriver driver = (FirefoxDriver) new WebDriver;, Child child = (Child) new Parent(); // This is downcasting and not supported in Java by default so here we have to typecast the Object of parent class into Child's class reference.
 
 Java Interview Question :
 1. https://www.geeksforgeeks.org/commonly-asked-java-programming-interview-questions-set-1/

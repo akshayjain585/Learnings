@@ -1,6 +1,6 @@
 /*
- * 1. byte --> short --> int --> long --> float --> double : Widening/Upgrading : Possible without typecasting
- * 2. Narrowing down any datatype from one to other : Narrowing : Have to typecast
+ * 1. byte --> short --> int --> long --> float --> double : Widening/Upgrading/Upcasting : Possible without typecasting
+ * 2. Narrowing down any datatype from one to other : Narrowing/Downcasting : Have to typecast
  */
 package javaConcepts;
 
