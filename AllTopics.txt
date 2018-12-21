@@ -439,7 +439,27 @@ Ans.
 Ans. http://learn-automation.com/best-way-to-handle-synchronization-in-selenium-webdriver/
 http://learn-automation.com/how-to-solve-stale-element-reference-exception-in-selenium-webdriver/
 
- 
+21. How to configure Selenium Grid?
+Ans.
+1. Create a Hub and Node configuration.
+Create Hub from Command Line :
+java -jar <Selenium Jar> -port 4723 -role hub
+
+2. Create Node after logging to any VM
+java -jar <Selenium Jar> -port 4723 -role node <HubIP>
+
+22. How to verify if WebElement exists on webpage or not ?
+Ans. 1. To get the title and assert with the expected title.
+2. To get the text and assert with the expected text.
+3. Use findElements method and check the size of it as mentioned below ;
+if(driver.findElements.size!=0){
+	syso("Element exists");
+}else{
+	syso("Element doesn't exists");
+}
+Refer : https://artoftesting.com/automationTesting/check-if-an-element-is-present-in-a-webpage-selenium-webdriver-java.html
+Note : Above code will throw an exception if findElement is used. Since, it throws "No Suce Element exception" if element is not found.
+
 ******************** TestNG **********************************************************************************************************************
 
 1. Annotations main sequence : @BeforeMethod --> @Test --> @AfterMethod
@@ -541,7 +561,8 @@ public void test(expectedException=ElementNotFoundException){}
 
 11. How to do parallel testing in TestNG?
 Ans. Using parallel attribute in testNG file
-<suite name="SmokeSuite" parallel="methods/classes/instance" thread-count="5"> : Threadcount : no of browsers to execute the test.
+<suite name="SmokeSuite" parallel="test/classes/methods/instance" thread-count="5"> : Threadcount : no of browsers to execute the test.
+Reference : https://www.softwaretestingmaterial.com/parallel-test-execution-testng/
 
 12. Customised reports in TestNG?
 Ans. Using iTestListener/iSuiteListener/iReporter interface.
@@ -579,13 +600,20 @@ Ans.
 
 	<test name = "Main test">
 	<parameter name="userNAme" value="Akshay">
-	<parameter name = "password"> value ="akshay">
+	<parameter name = "password" value ="akshay">
 		<classes>
 			<class name = "com.android.packageName.className">
 			<class name = "com.android.packageName.className">
 		</classes>
 	</test>
 </suite>
+
+17. How to print the method name in each BeforeMethod() annotation?
+Ans. Use this syntax :
+@BeforeMethod
+public void beforeMethod(Method m){
+	System.out.println(m.getName());
+}
 
 ************** API Testing **************************************************************************************************************
 
@@ -610,6 +638,7 @@ Ans.
 Ans. 2xx : Success , 3xx : Redirection, 4xx : Client Error, 5xx : Server error
 200 : OK		  : With GET request
 201 : Created     : With POST/PUT request
+202 : Accepted
 204 : No content  : With DELETE request
 400 : Bad Request
 401 : Unauthorised : Authentication error 
@@ -652,10 +681,16 @@ String headerName = Response.getHeader("Content-Encoding");
 
 7. How to validate the response body using Rest Assured?
 Ans. Similar way like validating the status code and header. Response interface has methods for validating the body as well.
-1. To get the body : Response.body() or Response.getBody() //Returns the body and this can be converted in String like Response.body().toString();
+1. To get the body : ResponseBody body = Response.body() or ResponseBody body = Response.getBody() //Returns the body and this can be converted in String like Response.body().asString(); //ResponseBody is also an interface
 2. To validate the exact node from JSON body : Response.JsonPath(); //Returns the JsonPath object
 Example : JsonPath jsonPath = Response.JsonPath();
 String city = jsonPath.get("City")  // Will give result for this : { "City" : "Delhi" }
+
+OR to get the array of list from the response :
+
+List<String> userNames = Response.jsonPath().getList("username"); //Refer : https://www.testingexcellence.com/parse-json-response-rest-assured/
+
+Refer : https://www.testingexcellence.com/parse-json-response-rest-assured/
 
 8. How to create a JSON body for making POST request if content type is JSON?
 Ans. JSONObject json = new JSONObject();
@@ -680,9 +715,9 @@ Refer to PostMan in Mac : Learning API's : Have imported the Tools QA private re
 11. POST v/s PUT?
 Ans. 
 1. Post is Cacheable if server sends the response in header. PUT is not cacheable
-2. Post is not idempotent. PUT is idempotent.
+2. Post is not idempotent. PUT is idempotent similar to DELETE. (Idempotent means multiple requests made by client will produce the same result)
 3. Post creates the resource. PUT updates the resource.
-4. Multiple POST req end up with diff result. Multiple PUT req will be same result.
+4. Multiple POST req end up with diff result. Multiple PUT req will be same result. (Bcz POST is not idempotent and PUT is idempotent)
 
 12. REST v/s SOAP?
 Ans. 
@@ -697,11 +732,10 @@ Ans.
 ******************** String & Collections ********************************************************************************************
 
 1. Why strings are immutable?
-Ans. Strings are immutable bcz it uses the concept of String literal. Lets say there are 5 references variables and all refers to one object and if one reference variable changes
-the value of the object then it will be affected to all the reference variables. Thats why its immutable.
+Ans. Strings are immutable bcz it uses the concept of String literal. Lets say there are 5 references variables and all refers to one object and if one reference variable changes the value of the object then it will be affected to all the reference variables. Thats why its immutable.
 Once you create a String object lets say String a = "Akshay",  JVM checks in the string constant pool if this object is present or not. If not, then it wil create a new object.
 
-Example : When we create a string in java like String s1="hello"; then an object will be created in string pool(hello) and s1 will be pointing to hello.Now if again we do String s2="hello"; then another object will not be created but s2 will point to hello because JVM will first check if the same object is present in string pool or not.If not present then only a new one is created else not.
+Example : When we create a string in java like String s1="hello"; then an object will be created in string pool(hello) and s1 will be pointing to hello.Now if again we do String s2="hello"; then another object will not be created but s2 will point to the same object hello because JVM will first check if the same object is present in string pool or not.If not present then only a new one is created else not.
 Now if suppose java allows string mutable then if we change s1 to hello world then s2 value will also be hello world so java String is immutable.
 
 2. String methods
@@ -879,12 +913,61 @@ Ans. Casting means taking an object of one type and converting it into an anothe
 Ans. Upcasting/Widening is possible in Java and done automatically. For downcasting, we have to typecast the object of one type into another's object type.
 Example :
 WebDriver driver = new FirefoxDriver();, Parent parent = new Child(); //This is upcasting and supported bydefault in Java 
-Here WebDriver is a super interface of every browser driver class like FirefoxDriver,ChromeDriver,SafariDriver etc. This means we are upcasting FirefoxDriver
-class object to WebDriver interface. That means, WebDriver interface reference is holding an object of FirefoxDriver class. This way, we can not call the methods of 
-FirefoxDriver class, only the methods which are overridden by FirefoxDriver class from WebDriver interface will be called. If we take Parent example, this means Parent class reference is 
-holding an object of Child class and only the overridden methods in Child class will be called along with all the methods of Parent class.
+Here WebDriver is a super interface of every browser driver class like FirefoxDriver,ChromeDriver,SafariDriver etc. This means we are upcasting FirefoxDriverclass object to WebDriver interface. That means, WebDriver interface reference is holding an object of FirefoxDriver class. This way, we can not call the methods of FirefoxDriver class, only the methods which are overridden by FirefoxDriver class from WebDriver interface will be called. If we take Parent example, this means Parent class reference is holding an object of Child class and only the overridden methods in Child class will be called along with all the methods of Parent class.
 
 FirefoxDriver driver = (FirefoxDriver) new WebDriver;, Child child = (Child) new Parent(); // This is downcasting and not supported in Java by default so here we have to typecast the Object of parent class into Child's class reference.
+
+24. Order of execution in Java ?
+Ans. 1. Static Variables
+2. Static Block
+3. Main Method
+4. Static Method
+5. Non Static variables
+6. Non Static Block
+7. Constructor
+8. Non Static Method
+
+Note : Better look for the example written in eclipse and memorize sequence as below :
+1. Static Block
+2. Instance Variables
+3. Non Static block
+4. Constructor
+
+25. How HashMap internally works in java ?
+Ans. HashMap internally works on the principle of Hashing. Hashing is the process of converting an object into integer form using hashCode() method.
+The default capacity of HashMap is 16 which is 2^4, that means [0-15] indexes and resizing of HashMap is done when it reaches 12th index which is calculated with a load factor of 0.75. Therefore, 16 * .75 = 12. After resize, it increases the capacity to 2^5 which is 32 elements. And again resize time will be calculated as 32*.75 = 24. That means again at 24th index resizing will happen and HashMap would be 2^6. 
+1. How hashmap stores the objects i.e how put(key,value) method works in HashMap?
+Ans. 1. First it checks if the given key is null or not, if its null, it stores it as a 0th index since the hashcode of null key is 0.
+2. It calculates the hashcode of the key using hashCode() method. After this, it gets the index of the hashCode using indexFor() method to store it in the HashMap array at particular index and store the element as an Entry object which stores Key,Value,hashCode and next node.
+3.In Case of collision:
+
+map.put(new Key("vaibhav"), 40);
+
+Steps:
+
+    Calculate hash code of Key {“vaibhav”}. It will be generated as 118.
+    Calculate index by using index method it will be 6.
+    Create a node object as :
+
+     {
+      int hash = 118
+      Key key = {"vaibhav"}
+      Integer value = 40
+      Node next = null
+    }
+
+    Place this object at index 6 if no other object is presented there.
+    In this case a node object is found at the index 6 – this is a case of collision.
+	In that case, check via hashCode() and equals() method that if both the keys are same.If keys are same, replace the value with current value.Otherwise connect this node object to the previous node object via linked list and both are stored at index 6.
+
+2. How does the get operation work in HashMap?
+Ans. 1. Calculate the hashcode for the key object using hashCode() method.
+2. Calculate the index for the hashCode using indexFor() method.
+3. Go to that particular index and verify if hashCode matches to what is stored already with what is generated now. If it matches, then verify if the key is equal to what is stored and what is passed in key method using equals() method. If it matches, then return the value of key object.
+4. How does get method work when Key object has same hashCode: It follows the same above step, compares the hashCode, if it comes same then check for the key value. If key doesn't match, it checks if the node has next element or points to null. If it points to null then return null else compare the key of next element again using equals() method. If key matches for the third element of the node in a linkedlist, return the value of that key.
+
+Refer : https://www.geeksforgeeks.org/internal-working-of-hashmap-java/
+
 
 Java Interview Question :
 1. https://www.geeksforgeeks.org/commonly-asked-java-programming-interview-questions-set-1/
@@ -927,7 +1010,7 @@ Ans.
 1. git reset : Reset staging area and leaves the working directory unchanged.
 2. git reset --hard : Reset staging and working directory.
 3. git reset <commit> : Reset staging area to last commit and leaves the working directory unchanged.
-4. git reset --hard <commit> : Reset staginga and working directory area to last commit.
+4. git reset --hard <commit> : Reset staging and working directory area to last commit.
 
 8. To pull the latest changes ?
 Ans. git pull
@@ -976,7 +1059,7 @@ Ans.
 compiled code, test code in Build.xml file											2. Maven has a dependency concept and download Jar's from local or central repository which doesn't need any manual effort.
 2. ANT uses lib to store JAR's which requires manual effort to download
 and change jars.
-3. ANT doesn't have a lifecycle. You need to define targets and dependencies.		3. Maven has a lifecycle which gets executed by "mvn clean install" and does clean, compile, test and packaging of code in JAR, WAR or EAR's.
+3. ANT doesn't have a lifecycle. You need to define targets and dependencies.		3. Maven has a lifecycle which gets executed by "mvn clean 		install" and does clean, compile, test and packaging of code in JAR, WAR or EAR's.
 4. Its mainly a build tool.															4. Its more than a build tool as a project management tool, can generate reports as well.
 
 
@@ -1019,13 +1102,15 @@ DB Layer : To process the requests received from Business layer
 2. 2 Tier : Where client manages Presentation and Business Layer and DB layer is separate
 3. 3 Tier : Where presentation, business and DB layer all are deployed on diff servers.
 
+2. https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/
+
 
 ********************************************************************************************************************************************** 
 
 SQL :
 
 1. Joins
-Ans. https://www.softwaretestingclass.com/sql-joins/
+Ans. https://www.softwaretestingclass.com/sql-joins/ , https://www.w3schools.com/sql/sql_join.asp
 
 2. Sub-Queries
 Ans. https://www.softwaretestingclass.com/sql-sub-queries/
@@ -1039,10 +1124,115 @@ Ans. https://www.softwaretestingclass.com/sql-union/
 5. Current Date
 Ans. SELECT GetDate(); 
 
+6. Types of Joins in SQL ?
+Ans. 1. Inner Join : Returns only matched rows from both the table.
+2. Outer Join 
+	2.1 : Left Outer Join /Left Join : Returns all columns from left table and matched rows from right table.
+	2.2 : Right Outer Join /Right Join : Returns all columns from right table and matched rows from left table.
+3. Full Join
+4. Cross Join : Returns the cartesian sum of both the tables.
 
-********************************************************************************************************************************************** 
+Synatx :
+Select Table1.Col1, Table2.col2 from Table1
+InnerJoin/Left Join/Right Join Table2
+ON Table1.col1 = Table2.col1
 
-2. https://www.upwork.com/hiring/development/a-beginners-guide-to-back-end-development/
+7. Queries :
+a). return employee record with highest salary?
+Ans. Select * from Employee where sal = (Select Max(sal) from Employee);
+
+b). return the highest salary in employee table?
+Ans. Select max(sal) from Employee;
+
+c). return 2nd highest salary from emp table?
+Ans. Select max(sal) from Employee where sal Not IN (Select max(sal) from Employee);
+
+d). Select range of employees based on id?
+Ans. Select * from Employee where empID between 100 and 500
+
+e). return an employee with highest salary and the employee's department name?
+Ans. Select e.firstName, e.lastName, d.departmentName from Employee e
+InnerJoin Department d
+ON (e.departmentID = d.departmentID)
+where sal IN (Select max(sal) from Employee);
+
+f). return highest salary,employee name, department name for each department?
+Ans. Select e.firstName, e.lastName, d.departmentName from Employee e
+InnerJoin Department d
+ON (e.DepartmentID = d.departmentID)
+where sal IN (Select max(sal) from Employee group by Department);
+
+g). return 3rd/nth highest salary ?
+Ans. Select TOP 1 Salary 
+	 FROM(
+		Select DISTINCT TOP 3 Salary
+		From Employee
+		Order By Salary Desc
+		 ) result
+	 Order By Salary;
+	 
+Explaination : The inside query gets 3 salaries which are distinct and TOP is used just to tell how many salaries which can be replaced by n as per the question, not related to highest number followed by Order By Desc so that the highest salary comes first. Later Order By Salary is used to put it in ascending order so that the last salary comes at first place and in outer query we have used TOP 1 which means only one salary to be returned.
+
+To return 17th highest salary :
+
+Select TOP 1 Salary From (Select DISTINCT TOP 17 Salary from Employees Order By DESC) result OrderBy Salary;
+
+h). Return all names from Employee which start with a and end with b?
+Ans. Select * from Employee where ename like 'a%b'; : Start with a and end with b
+Select * from Employee where ename like 'a%'; : Start with a
+Select * from Employee where ename like '%a'; : End with a
+Select * from Employee where ename like '_r'; : Values which have r at second position
+
+Note : Use Like operator using % (Percentile) and _ (Underscore) : % means zero, one or any number of characters. _ means only one characters
+
+i). List the number of customers in each country. Only include countries with more than 10 customers. 
+Ans. Select Country, count(customer_ID) from Customer
+	GroupBy Country
+	Having count(customer_ID) > 7
+
+j). List the number of customers in each country, except the USA, sorted high to low. Only include countries with 9 or more customers.
+Ans. Select count(customer_ID), country from Customer
+	 Where country <> 'USA'       // <> means not equal to
+	 GroupBy Country
+	 Having count(customer_ID) > 9
+
+For GroupBy and Having clause queries: Refer : https://www.dofactory.com/sql/having
+
+8. Difference between Primary, Unique and Foreign Key ?
+Ans. Primary Key : Used to uniquely identify a record in a table. It has implicit Unique and Not Null constraint. That means all the values of primary key must be unique and can not contain null values. A table can have only one primary key.
+
+Unique Key : Its also used to uniquely identify a record in a table. However, Primary key has a unique key contraint implicitly. But unique key doesn't have that. Also, you can have as many as Unique key in a table but only one primary key. Also, it allows null value but only one.
+
+Foreign Key : Used to uniquely identify a record in the other table which has a refernce the primary key in first table.
+
+9. Constraints in SQL ?
+Ans. Used to set some rules in a table. Types of Constraints :
+1. NOT NULL : The column values can not be null.
+2. UNIQUE KEY : All column values are different
+3. PRIMARY KEY : It has Not null and Unique key contraint by default.
+4. FOREIGN KEY : Uniquely identifies a record in another table.
+5. CHECK : To verify the specific condition in a table.
+6. DEFAULT : To initialize the column value with default when no value is specified.
+7. INDEX : To retrieve data from database using index quickly.
+
+10. What is Stored procedure in SQL ?
+Ans. Stored procedure is a function which consists of many SQL statements to perform some actions on database and we can execute them whenever and wheerever required. Its like a function/method we create in programming language to avoid writing the same code again and again and do that using a method. Same can be done by stored procedure which is nothing but a method that consists of SQL statements to perform some action on database.
+
+11. What is trigger in Database ?
+Ans. Trigger is a special type of Stored Procedure which automatically gets executed whenever some event occurs in a databse. Example :
+When a new student is added to student database : New record should be created in related tables like score, exam etc.
+
+12. What is UNION in SQL ?
+Ans. Used to combine the result set of 2 or more tables in SQL provided that both the table has same number of columns of same type. It eliminates duplicates by default. To allow duplicates, use UNION All. Example Below :
+Select column_name from table1
+UNION/UNION ALL
+Select column_name from table2
+
+13. Difference between DROP, TRUNCATE and DELETE in SQL ?
+Ans. DROP : Removes the table from the database. All table definition, priviledges are removed and can not be rolled back. It is DDL command.
+TRUNCATE : Removes all rows from a table and can not be rolled back. Table def is not removed. Can not use where clause with truncate. Its also a DDL command. Free the space contained by the table.
+DELETE : Removes all rows from table if conditioin is not specified. Can be rolled back and its a DML command. Does not free the space containing by the table.
+
 
 ********************************************************************************************************************************************** 
 
@@ -1062,3 +1252,6 @@ Collections : https://beginnersbook.com/2015/01/difference-between-list-set-and-
 
 
 Java Interview : https://www.studytonight.com/flashcards/Java/#
+
+1. CamelCase String
+2. Multiples of a number in an array

@@ -962,3 +962,308 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.beanshell
 2018-10-08 19:19:11,478 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-10-08 19:19:11,489 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\webservices-learnings\src\test\resources
 2018-10-14 09:20:14,844 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-11-28 21:38:06,101 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-11-28 21:38:17,146 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-28 21:38:17,171 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-11-28 21:38:17,182 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-28 21:38:17,197 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\AutomationFrameworkCoaching\src\test\resources
+2018-11-29 15:34:31,406 [Worker-2] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-11-29 15:34:39,169 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 15:34:39,190 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-11-29 15:34:39,200 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 15:34:39,214 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\AutomationFrameworkCoaching\src\test\resources
+2018-11-29 16:09:53,077 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 16:09:53,100 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-11-29 16:09:53,107 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 16:09:53,119 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\AutomationFrameworkCoaching\src\test\resources
+2018-11-29 16:09:53,340 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 16:09:53,355 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\webservices-learnings\src\main\resources
+2018-11-29 16:09:53,356 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-11-29 16:09:53,371 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\webservices-learnings\src\test\resources
+2018-11-29 16:12:31,620 [Worker-11] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-12-03 10:56:04,592 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-03 10:56:04,622 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-12-03 10:56:04,634 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-03 10:56:04,649 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\AutomationFrameworkCoaching\src\test\resources
+2018-12-03 10:56:04,875 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-03 10:56:04,890 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\webservices-learnings\src\main\resources
+2018-12-03 10:56:04,892 [Worker-2] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-03 10:56:04,906 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\webservices-learnings\src\test\resources
+2018-12-03 10:56:07,335 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-12-03 11:42:06,862 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2018-12-03 11:42:06,947 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.jar
+2018-12-03 11:42:07,009 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom
+2018-12-03 11:42:07,063 [ModalContext] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/archetypes/maven-archetype-quickstart/1.1/maven-archetype-quickstart-1.1.pom
+2018-12-03 11:42:38,993 [Worker-21] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' D:\Main\Learnings\Demo\pom.xml
+2018-12-03 11:42:39,512 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar
+2018-12-03 11:42:39,644 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar
+2018-12-03 11:42:39,875 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.jar
+2018-12-03 11:42:40,097 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.jar
+2018-12-03 11:42:40,376 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom
+2018-12-03 11:42:40,429 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom
+2018-12-03 11:42:40,476 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven/2.0.9/maven-2.0.9.pom
+2018-12-03 11:42:40,529 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven/2.0.9/maven-2.0.9.pom
+2018-12-03 11:42:40,614 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-parent/8/maven-parent-8.pom
+2018-12-03 11:42:40,698 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-parent/8/maven-parent-8.pom
+2018-12-03 11:42:40,776 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom
+2018-12-03 11:42:40,845 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom
+2018-12-03 11:42:40,945 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom
+2018-12-03 11:42:41,045 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom
+2018-12-03 11:42:41,161 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom
+2018-12-03 11:42:41,261 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom
+2018-12-03 11:42:41,361 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom
+2018-12-03 11:42:41,415 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom
+2018-12-03 11:42:41,477 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom
+2018-12-03 11:42:41,530 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom
+2018-12-03 11:42:41,599 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom
+2018-12-03 11:42:41,646 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom
+2018-12-03 11:42:41,715 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom
+2018-12-03 11:42:41,762 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom
+2018-12-03 11:42:41,831 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom
+2018-12-03 11:42:41,878 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom
+2018-12-03 11:42:41,946 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom
+2018-12-03 11:42:42,078 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom
+2018-12-03 11:42:42,278 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom
+2018-12-03 11:42:42,463 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom
+2018-12-03 11:42:42,532 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom
+2018-12-03 11:42:42,594 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom
+2018-12-03 11:42:42,648 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom
+2018-12-03 11:42:42,700 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom
+2018-12-03 11:42:42,763 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom
+2018-12-03 11:42:42,815 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom
+2018-12-03 11:42:42,931 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom
+2018-12-03 11:42:43,047 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom
+2018-12-03 11:42:43,490 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom
+2018-12-03 11:42:43,559 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom
+2018-12-03 11:42:44,545 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+2018-12-03 11:42:44,645 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom
+2018-12-03 11:42:44,771 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+2018-12-03 11:42:44,848 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom
+2018-12-03 11:42:45,032 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom
+2018-12-03 11:42:45,149 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom
+2018-12-03 11:42:45,281 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom
+2018-12-03 11:42:45,397 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom
+2018-12-03 11:42:45,497 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+2018-12-03 11:42:45,544 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom
+2018-12-03 11:42:45,629 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+2018-12-03 11:42:45,682 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom
+2018-12-03 11:42:45,727 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+2018-12-03 11:42:45,782 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom
+2018-12-03 11:42:45,998 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar
+2018-12-03 11:42:46,098 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar
+2018-12-03 11:42:46,145 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar
+2018-12-03 11:42:46,599 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar
+2018-12-03 11:42:46,646 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2018-12-03 11:42:46,768 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2018-12-03 11:42:46,815 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar
+2018-12-03 11:42:46,931 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar
+2018-12-03 11:42:46,984 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar
+2018-12-03 11:42:47,385 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar
+2018-12-03 11:42:47,432 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar
+2018-12-03 11:42:47,585 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar
+2018-12-03 11:42:47,632 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar
+2018-12-03 11:42:47,865 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar
+2018-12-03 11:42:47,901 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar
+2018-12-03 11:42:48,835 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar
+2018-12-03 11:42:48,873 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar
+2018-12-03 11:42:49,035 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar
+2018-12-03 11:42:49,072 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar
+2018-12-03 11:42:49,172 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar
+2018-12-03 11:42:49,227 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar
+2018-12-03 11:42:49,335 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar
+2018-12-03 11:42:49,388 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar
+2018-12-03 11:42:49,604 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar
+2018-12-03 11:42:49,651 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar
+2018-12-03 11:42:49,904 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar
+2018-12-03 11:42:49,935 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar
+2018-12-03 11:42:50,371 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar
+2018-12-03 11:42:50,404 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar
+2018-12-03 11:42:50,520 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar
+2018-12-03 11:42:50,620 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar
+2018-12-03 11:42:50,820 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar
+2018-12-03 11:42:50,873 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+2018-12-03 11:42:50,973 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+2018-12-03 11:42:51,020 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+2018-12-03 11:42:51,230 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+2018-12-03 11:42:51,321 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+2018-12-03 11:42:51,436 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+2018-12-03 11:42:51,536 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+2018-12-03 11:42:51,790 [Worker-21] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+2018-12-03 11:42:54,656 [Worker-21] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SeleniumDemo:Demo:0.0.1-SNAPSHOT @ D:\Main\Learnings\Demo\pom.xml.
+2018-12-03 11:42:55,057 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Demo/src/main/java
+2018-12-03 11:42:55,079 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Demo/src/test/java
+2018-12-03 11:42:55,557 [Worker-21] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 16 sec
+2018-12-03 11:42:56,186 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:42:56,186 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 11:42:56,190 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:42:56,190 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 11:49:03,326 [Worker-26] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SeleniumDemo:Demo:0.0.1-SNAPSHOT @ D:\Main\Learnings\Demo\pom.xml.
+2018-12-03 11:49:03,395 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.pom
+2018-12-03 11:49:03,442 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.pom
+2018-12-03 11:49:03,495 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.pom
+2018-12-03 11:49:03,527 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.pom
+2018-12-03 11:49:03,595 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.pom
+2018-12-03 11:49:03,642 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.pom
+2018-12-03 11:49:03,692 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.pom
+2018-12-03 11:49:03,727 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.pom
+2018-12-03 11:49:04,027 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.pom
+2018-12-03 11:49:04,080 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.pom
+2018-12-03 11:49:04,127 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/parent/3.11.0/parent-3.11.0.pom
+2018-12-03 11:49:04,174 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/parent/3.11.0/parent-3.11.0.pom
+2018-12-03 11:49:04,258 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.pom
+2018-12-03 11:49:04,311 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.pom
+2018-12-03 11:49:04,411 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.pom
+2018-12-03 11:49:04,495 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.pom
+2018-12-03 11:49:04,596 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.pom
+2018-12-03 11:49:04,676 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.pom
+2018-12-03 11:49:04,727 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.pom
+2018-12-03 11:49:04,780 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.pom
+2018-12-03 11:49:04,880 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.pom
+2018-12-03 11:49:05,081 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.pom
+2018-12-03 11:49:05,193 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.pom
+2018-12-03 11:49:05,240 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.pom
+2018-12-03 11:49:05,396 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar
+2018-12-03 11:49:05,476 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar
+2018-12-03 11:49:05,527 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar
+2018-12-03 11:49:05,627 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar
+2018-12-03 11:49:05,675 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar
+2018-12-03 11:49:05,781 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar
+2018-12-03 11:49:05,813 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar
+2018-12-03 11:49:06,029 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar
+2018-12-03 11:49:06,210 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar
+2018-12-03 11:49:06,802 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar
+2018-12-03 11:49:06,902 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar
+2018-12-03 11:49:07,133 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar
+2018-12-03 11:49:07,195 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar
+2018-12-03 11:49:07,302 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar
+2018-12-03 11:49:07,417 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar
+2018-12-03 11:49:07,621 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar
+2018-12-03 11:49:07,653 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar
+2018-12-03 11:49:07,757 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar
+2018-12-03 11:49:07,790 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar
+2018-12-03 11:49:07,891 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar
+2018-12-03 11:49:07,922 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar
+2018-12-03 11:49:08,292 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar
+2018-12-03 11:49:08,323 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar
+2018-12-03 11:49:08,793 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar
+2018-12-03 11:49:08,825 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+2018-12-03 11:49:08,925 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar
+2018-12-03 11:49:08,941 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar
+2018-12-03 11:49:09,094 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar
+2018-12-03 11:49:09,109 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar
+2018-12-03 11:49:09,198 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar
+2018-12-03 11:49:09,229 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar
+2018-12-03 11:49:09,309 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar
+2018-12-03 11:49:09,325 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
+2018-12-03 11:49:09,393 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar
+2018-12-03 11:49:09,440 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar
+2018-12-03 11:49:09,594 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar
+2018-12-03 11:49:09,610 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar
+2018-12-03 11:49:10,194 [Worker-26] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar
+2018-12-03 11:49:12,528 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:49:12,528 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 11:49:12,528 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:49:12,528 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 11:54:02,195 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:54:02,196 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 11:54:02,197 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 11:54:02,198 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 12:03:02,229 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SeleniumDemo:Demo:0.0.1-SNAPSHOT @ D:\Main\Learnings\Demo\pom.xml.
+2018-12-03 12:03:02,540 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:02,540 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 12:03:02,542 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:02,542 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 12:03:04,044 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:04,044 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 12:03:04,061 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:04,061 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 12:03:13,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:13,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 12:03:13,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:13,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 12:03:29,630 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:29,630 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 12:03:29,630 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 12:03:29,630 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:08:58,923 [Worker-41] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SeleniumDemo:Demo:0.0.1-SNAPSHOT @ D:\Main\Learnings\Demo\pom.xml.
+2018-12-03 14:08:59,324 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/testng/testng/6.14.3/testng-6.14.3.jar
+2018-12-03 14:08:59,640 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/testng/testng/6.14.3/testng-6.14.3.jar
+2018-12-03 14:08:59,671 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/com/beust/jcommander/1.72/jcommander-1.72.jar
+2018-12-03 14:08:59,809 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/com/beust/jcommander/1.72/jcommander-1.72.jar
+2018-12-03 14:08:59,955 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://192.168.210.73:8081/nexus/content/groups/public/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar
+2018-12-03 14:09:00,409 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://192.168.210.73:8081/nexus/content/groups/public/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar
+2018-12-03 14:09:01,574 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:01,574 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:09:01,574 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:01,574 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:09:02,875 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:02,875 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:09:02,890 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:02,890 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:09:29,481 [Worker-40] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Main\Learnings\Demo
+2018-12-03 14:09:29,481 [Worker-40] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B clean
+2018-12-03 14:09:33,523 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:33,523 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:09:33,525 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:09:33,525 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:19:51,304 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:19:51,304 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:19:51,305 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:19:51,306 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:20:05,561 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:05,561 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:20:05,561 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:05,561 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:20:09,481 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:09,481 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:20:09,481 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:09,481 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:20:17,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:17,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:20:17,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:20:17,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:23:25,363 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:23:25,363 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:23:25,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:23:25,379 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:23:52,929 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:23:52,929 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:23:52,945 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:23:52,945 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:24:03,109 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:24:03,109 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:24:03,109 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:24:03,109 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:26:44,989 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:26:44,989 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:26:44,989 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:26:44,989 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:28:18,368 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:28:18,368 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:28:18,368 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:28:18,368 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:37:42,987 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:37:42,987 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:37:42,994 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:37:42,994 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:37:58,659 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:37:58,659 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:37:58,659 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:37:58,659 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-03 14:39:41,200 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:39:41,200 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-03 14:39:41,200 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-03 14:39:41,200 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-04 14:25:58,524 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-12-04 15:50:07,492 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2018-12-10 15:14:37,450 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-12-10 15:33:40,875 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-10 15:33:40,876 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-10 15:33:40,890 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-10 15:33:40,890 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-14 21:11:09,887 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-12-14 21:11:22,232 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-14 21:11:22,233 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\main\resources
+2018-12-14 21:11:22,235 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-12-14 21:11:22,235 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Main\Learnings\Demo\src\test\resources
+2018-12-14 21:12:22,498 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

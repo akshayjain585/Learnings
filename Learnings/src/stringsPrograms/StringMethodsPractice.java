@@ -21,20 +21,15 @@ public class StringMethodsPractice {
 		System.out.println(sb11.equals(sb22)); 			//false
 		System.out.println(sb1.equals(sb));				//false
 		System.out.println("Poddar".substring(3));		//dar
-		StringBuilder s1=new StringBuilder("hello");	
-		StringBuilder s2=new StringBuilder("hello");
 		String a1 = "hello";
 		String a3 = new String("hello");
-		System.out.println(a1==a3);
 		String a2 = "hello";
-		System.out.println(s1==s2);						//false
-		System.out.println(s1.equals(s2));				//false
+		String a4 = new String("hello");
+		System.out.println(a1==a3);						//false
 		System.out.println(a1==a2);						//true
+		System.out.println(a1.equals(a3));              //true
+		System.out.println(a3==a4);                     //false
 
-		String a11 = new String("Amit");
-		String a22 = "Amit";
-		System.out.println(a11==a22);					//false
-		System.out.println(a1.equals(a2));    			//true
 
 		
 	}

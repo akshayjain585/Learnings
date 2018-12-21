@@ -38,9 +38,9 @@ public class ArrayRotatedCount {
 			int mid = (start+end)/2;		
 			int next = (mid+1)%list.length;			//Used %list.length to put next element as first element if mid is last element since the output would be 0 in that case.
 			int prev = (mid-1 + list.length)%list.length; //Added list.length to avoid negative value if mid is first element.
-			if(list[mid]<=prev && list[mid]<=next){
+			if(list[mid]<=list[prev] && list[mid]<=list[next]){
 				return mid;
-			}else if(list[mid]<=end){	//This means the right array is sorted so the minimum element lies in first half so decrement the end value.
+			}else if(list[mid]<=list[end]){	//This means the right array is sorted so the minimum element lies in first half so decrement the end value.
 				end = mid-1;
 			}else{
 				start = mid+1;
@@ -56,7 +56,7 @@ public class ArrayRotatedCount {
 		int[] list = {10,11,12,13,2,3,4,5};
 		int[] list1 = {2,3,4,5,10,11,12,13};
 		System.out.println(rotatedCountLS(list));
-		System.out.println(rotatedCountBS(list1));
+		System.out.println(rotatedCountBS(list));
 		
 	}
 

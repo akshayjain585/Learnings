@@ -1,6 +1,7 @@
 /*
  * 1. Parent class default constructor will be always called first without using Super keyword.
  * 2. Super keyword is required when there is parameterized constructor to be called. Example : super(String name);
+ * 3. Static methods can not be overriden because it belongs to a class, not to a object. So, parent class static method will get called as shown in last example while upcasting of child object with Parent class.
  */
 
 
@@ -17,7 +18,7 @@ class Parent{
 		System.out.println("Parent class parameterized constructor");
 	}
 	
-	public void parentMethod1(){
+	public static void parentMethod1(){
 		System.out.println("Parent Method1");
 	}
 	
@@ -40,7 +41,7 @@ class Child extends Parent{
 		System.out.println("Child class Parameterized constructor");
 	}
 	
-	public void parentMethod1(){
+	public static void parentMethod1(){
 		System.out.println("Child Method1");
 	}
 	
@@ -73,7 +74,7 @@ public class ConstructorInheritanceTest {
 		System.out.println("**");
 		
 		Parent p1 = new Child();   //Will call the overridden methods of Child class only and different method of Parent class
-		p1.parentMethod1();	//Child Method1
+		p1.parentMethod1();	//Parent Method1 will get called since its a static method and runtime polymorphism doesn't happen with static method.
 		p1.parentMethod2();	//Child Method2
 		p1.parentDifferent();	//Parent Different
 	
