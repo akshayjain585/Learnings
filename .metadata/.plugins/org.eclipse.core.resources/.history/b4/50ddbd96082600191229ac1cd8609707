@@ -1,0 +1,59 @@
+/*
+ * Execution order : 
+ * 1. Since we have created an object of B, control will go to B class default constructor first.
+ * 2. JVM finds this keyword which calls the same class constructor of one argument.
+ * 3. Same class single arguement parameterized constructor has this keyword again which redirects to another same class param constructor.
+ * 4. 2 arguements param constructor has super keyword which redirects to parent class param constructor
+ * 5. Order : Parent class Param -> Child class 2 argument param const -> Child class single argument param const -> default child class const
+ * This concept is called constructor chaining where one constructor can call other constructor of same class.
+ * 6. Constructor can't be declared as final because its a special type of method and final is used to avoid method being overridden AND constructor can't be overridden so it can't be declared as final
+ * 7. Constructor can't be declared as static because constructor is called when object is created and static is used for class not for object.
+ * Note : Ref : https://www.programcreek.com/2013/04/what-are-the-frequently-asked-questions-about-constructors-in-java/
+ * Above link to know on why to define default constructor in parent class if parameterized constructor is defined in parent class.
+ */
+
+package javaConcepts;
+
+class A{
+	
+//	A(){
+//		System.out.println("Parent Class Constructor");
+//	}
+	
+	A(int a){
+		System.out.println("Parent class parameterized constructor");
+		
+	}
+}
+
+class B extends A{
+	
+	B(){
+		this(1); //Calling the same class parameterized constructor using this keyword
+		System.out.println("Child class Constructor");
+	}
+	
+	B(int a){
+		this(1,2); //Calling the same class parameterized constructor using this keyword which takes 2 arguements
+		System.out.println("Child class Parameterized constructor with one arguement");
+	}
+	
+	B(int a, int b){
+		//super(); //Calling super class parameterized constructor
+		System.out.println("Child class Parameterized constructor with two arguement");
+	}
+}
+
+
+public class ConstructorChaining {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		B b = new B();
+
+
+
+	}
+
+}

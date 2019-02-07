@@ -58,6 +58,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Main\Learnings\webservices-learnings"/>
+			<item value="D:\Main\Learnings"/>
+			<item value="D:\Main\Learnings\Learnings"/>
 			<item value="D:\Main\Learnings\SeleniumDemo"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -71,13 +74,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="SeleniumDemo.Demo"/>
+			<item value="GoJek_Assignment.GoJek_Assignment"/>
 		</list>
 		<list key="groupId">
-			<item value="SeleniumDemo"/>
+			<item value="GoJek_Assignment"/>
 		</list>
 		<list key="artifactId">
-			<item value="Demo"/>
+			<item value="GoJek_Assignment"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

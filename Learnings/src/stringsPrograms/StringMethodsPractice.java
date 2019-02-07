@@ -11,7 +11,7 @@ public class StringMethodsPractice {
 		StringBuilder sb22 = new StringBuilder("Amit");
 		String sb = "Amit";
 		
-		/*There is no equal method in StringBuffer and StringBuilder class so it uses equals method of Object class
+		/*There is no equals method in StringBuffer and StringBuilder class so it uses equals method of Object class
 		 * which compares the references of both the objects instead of the objects value. Thats why sb1.equals(sb2) is "false"
 		 */
 		

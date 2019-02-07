@@ -38,7 +38,8 @@ public class SubArray {
 		int[] list1 =  {11, 1, 13, 21, 3, 7};
 		int[] list2 = {11, 3, 7, 1};
 		int[] list3 = {10, 5, 2, 23, 19};
-		boolean result = isSubArray(list1,list2);
+		int[] list4 = {19, 5, 3};
+		boolean result = isSubArray(list3,list4);
 		System.out.println(result);
 	}
 

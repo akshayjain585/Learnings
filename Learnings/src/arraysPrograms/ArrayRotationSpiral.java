@@ -20,27 +20,31 @@ public class ArrayRotationSpiral {
 		while(t<=b && l<=r){
 			if(dir==0){
 				for(int i=l; i<=r; i++){		//Traverse L to R and increment t row since thats printed now
-					System.out.println(list[t][i]);
+					System.out.print(list[t][i]+"  ");
 				}
+				System.out.println();
 				t++;
 				dir=1;
 			}else if(dir==1){
 				for(int i=t; i<=b; i++){		//Traverse T to B and decrement r column since thats printed now
-					System.out.println(list[i][r]);
+					System.out.print(list[i][r]+"  ");
 				}
+				System.out.println();
 				r--;
 				dir=2;
 			}else if(dir==2){
 				for(int i=r; i>=l; i--){		//Traverse R to L and decrement B row since thats printed now
-					System.out.println(list[b][i]);
+					System.out.print(list[b][i]+"  ");
 				}
+				System.out.println();
 				b--;
 				dir=3;
 			}
 			else if(dir ==3){
 				for(int i=b; i>=t; i--){		//Traverse B to T and increment L column since thats printed now
-					System.out.println(list[i][l]);
+					System.out.print(list[i][l]+"  ");
 				}
+				System.out.println();
 				l++;
 				dir=0;
 			}
@@ -73,7 +77,7 @@ public class ArrayRotationSpiral {
 		
 		for(int i=0; i<4; i++){
 			for(int j=0; j<4; j++){
-				System.out.print(list[i][j]+" ");
+				System.out.print(list[i][j]+"  ");
 			}
 			System.out.println();
 		}

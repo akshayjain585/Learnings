@@ -1,16 +1,23 @@
 /*
  * 1. Parent class default constructor will be always called first without using Super keyword.
  * 2. Super keyword is required when there is parameterized constructor to be called. Example : super(String name);
- * 3. Static methods can not be overriden because it belongs to a class, not to a object. So, parent class static method will get called as shown in last example while upcasting of child object with Parent class.
+ * 3. Static methods can not be overridden because it belongs to a class, not to a object. So, parent class static method will get called as shown in last example while upcasting of child object with Parent class and this is known as Overhiding not Overriding.
+ * Note : Ref : https://www.programcreek.com/2013/04/what-are-the-frequently-asked-questions-about-constructors-in-java/
+ * 1. Above link to know on why to define default constructor in parent class if parameterized constructor is defined in parent class and the reason is because compiler automatically adds super() keyword in all the constructor defined in base class
+ *	to call the parent class constructor when the object of child class is created. Since, you created parameterized constructor in parent class, JVM doesn't create the default no argument constructor in parent class and the constructor will give the compile time error in base class itself 
+ *  unless we explicitly call super parameterized constructor.
  */
 
 
 package javaConcepts;
 
 class Parent{
+	/*
+	 * This comment is for Point 1 below note : If the below default constructor is not defined here and in base class super parameterized constructor is not called in all the constructors. JVM will give the compile time error since it adds the super() keyword in every constructor which will call the default constructor of parent class
+	 * which will not be available since we created parameterized constructor in parent class. So, JVM will not automatically create the default constructor in parent class. To test this, comment the default constructor in parent class which is Parent(){}. 
+	 */
 	
-	
-	  Parent(){
+	  Parent(){			
 		System.out.println("Parent class constructor");
 	}
 	
@@ -77,6 +84,7 @@ public class ConstructorInheritanceTest {
 		p1.parentMethod1();	//Parent Method1 will get called since its a static method and runtime polymorphism doesn't happen with static method.
 		p1.parentMethod2();	//Child Method2
 		p1.parentDifferent();	//Parent Different
+		//p1.childDifferent() : Will not have access to this method.
 	
 		
 		

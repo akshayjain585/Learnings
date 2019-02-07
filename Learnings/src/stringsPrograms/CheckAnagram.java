@@ -28,7 +28,7 @@ public class CheckAnagram {
 	
 	public static void main(String[] args){
 		
-		String s1 = "Liste";
+		String s1 = "Listen";
 		String s2 = "Silent";
 		checkAnagram(s1,s2);
 	}

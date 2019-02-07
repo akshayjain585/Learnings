@@ -1,0 +1,36 @@
+package stringsPrograms;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class LongestSubstring {
+	
+	/*
+	 * Reference : https://stackoverflow.com/questions/9734474/find-longest-substring-without-repeating-characters
+	 */	
+		public static void longestSubStringStackOverFlow(String input){
+			char[] c = input.toCharArray();
+			Set<Character> set = new LinkedHashSet<>();
+			String actualLongestSubString = "";
+			String templongestSubString = "";
+			for(Character key : c){
+				if(set.contains(key)){
+					actualLongestSubString = "";
+					set.clear();
+				}
+				actualLongestSubString = actualLongestSubString + key ;
+				set.add(key);
+				if(actualLongestSubString.length() > templongestSubString.length()){
+					templongestSubString = actualLongestSubString;
+				}
+			}
+			System.out.println(templongestSubString+" and the length is : "+templongestSubString.length());
+		}
+		
+	public static void main(String[] args){
+		String input = "abcabcbb";
+		String input1 = "GEEKSFORGEEKS";
+		longestSubStringStackOverFlow(input1);
+		longestSubStringStackOverFlow(input);
+	}
+}

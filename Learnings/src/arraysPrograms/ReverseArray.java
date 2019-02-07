@@ -30,12 +30,20 @@ public class ReverseArray {
 			System.out.print(list[i]+" ");
 		}
 	}
+	
+	public static void stringTypeReverse(int[] list){
+		
+		for(int i=list.length-1; i>=0; i--){
+			System.out.print(list[i]+" ");
+		}
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		int[] list = {1,2,3,4,5,6,7,8,9,10};
 		int[] list1 = {1,2,3,4,5,6,7,8,9,10};
+		int[] list2 = {1,2,3,4,5,6,7,8,9,10};
 		
 		int start = 0;
 		int end = list.length-1;
@@ -44,6 +52,8 @@ public class ReverseArray {
 		System.out.println();
 		recursiveReverse(list1,start,end);
 		printArray(list1);
+		System.out.println();
+		stringTypeReverse(list2);
 
 	}
 

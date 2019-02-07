@@ -36,7 +36,7 @@ Xpath :
 6. "//*[contains(text(),'value')]" : To get xpath using contains and text method
 7. //tagName[@attribute='value']/tagName : Parent-child : Relative-Absolute xpath
 8. "//input[@type='text' and not(contains(@title,'Search'))]"
-
+9. CSS : https://www.softwaretestinghelp.com/css-selector-selenium-locator-selenium-tutorial-6/
 
 Some of the common assertions supported by TestNG are
 
@@ -94,7 +94,7 @@ for(int rows=1; rows<=5; rows++){
 }
 
 
-************* Handling WebTable in Selenium ****************************************************************************************************************
+**********************************Handling WebTable in Selenium **************************************************************
 
 Table Format : 
 
@@ -185,7 +185,7 @@ for(int i=0; i<rows.size(); i++){
 	}
 }
 
-************* Jmeter Performance Testing Questions!****************************************************************************************************************
+************* Jmeter Performance Testing Questions!***********************************************
 
 ThreadGroup : To simulate the number of users to hit the server for checking the performance.
 Ramp-up period : Defines the time difference between each thread to make a request to the server
@@ -208,7 +208,8 @@ Max : Max time taken by a sample for specific label.
 Error% : Percentage of failed request per label.
 Throughput : No. of request processed by the server per time unit(sec,min,hours). Larger throughput is better.
 
-**************** Test Lead Questions!*********************************************************************************************************************************
+
+**************** Test Lead Questions!*****************************************************************
 
 I am not only responsible for execution but also responsible for the output of testing activities.
 
@@ -296,6 +297,7 @@ al.accept(); al.dismiss();
 int noOfFrames = driver.findElements(By.tagName("iframe")).size();
 driver.switchTo().frame() : frame() is overloaded method which can take either frame index as int, frame name as String or frame element as WebElement.
 driver.switchTo().defaultContent(); //To move back to main window.
+driver.switchTo().parentFrame(); //To move the control to immediate parent frame if you are in nested frame.
 //DropDown
 Select s = new Select(driver.findElement(By.xpath(" ")));
 s.selectByIndex(); //
@@ -417,6 +419,7 @@ Ans. It has four components :
 2. JSON(Java Script Object Notation) Wire protocol to send the information to browser driver like firefoxdriver, chromedriver etc.
 3. Browser drivers like FirefoxDriver, ChromeDriver,OperaDriver etc
 4. Browsers like Firefox Browser, chrome , Internet, Safari
+https://www.softwaretestingmaterial.com/selenium-webdriver-architecture/
 
 WebDriver hierarchy :
 1. SearchContext is the super interface which has only two methods : findElement and findElements
@@ -460,6 +463,7 @@ if(driver.findElements.size!=0){
 Refer : https://artoftesting.com/automationTesting/check-if-an-element-is-present-in-a-webpage-selenium-webdriver-java.html
 Note : Above code will throw an exception if findElement is used. Since, it throws "No Suce Element exception" if element is not found.
 
+
 ******************** TestNG **********************************************************************************************************************
 
 1. Annotations main sequence : @BeforeMethod --> @Test --> @AfterMethod
@@ -470,7 +474,7 @@ Note : @CacheLookup : To improve the script performance by storing/caching the w
 2. Complete Sequence : @BeforeSuite @BeforeTest @BeforeClass @BeforeMethod @Test @AfterMethod @AfterClass @AfterTest @AfterSuite
 
 3. Difference between @BeforeTest, @BeforeClass and @BeforeMethod annotations in TestNG?
-Ans. Afer understaning the TestNG.xml file, the hirarchy is :
+Ans. Afer understaning the TestNG.xml file, the hierarchy is :
 <suite>
 	<test name = "Sanity">
 		<classes>

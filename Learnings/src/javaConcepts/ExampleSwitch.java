@@ -1,0 +1,27 @@
+package javaConcepts;
+
+public class ExampleSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int i=10;
+		
+		switch(i){
+		
+		case 5: System.out.println("5");
+		break;
+		
+		case 10: System.out.println("10");
+		//break;		//Comes in this case and found If break is not added, then it will go in next case and print. There if break is found. It will exit.
+		
+		case 15: System.out.println("15");
+		break;
+		
+		default:System.out.println("default");
+		break;
+		}
+				
+	}
+
+}

@@ -1,0 +1,48 @@
+package javaConcepts;
+
+public class ExampleSapientQues {
+	
+	static int $;
+	static String c;
+	
+	public void m1(){
+		System.out.println("PM1");
+	}
+	
+	public void m2(){
+		System.out.println("PM2");
+	}
+	
+	public static void main(String[] args){
+		
+		System.out.println($);	//0
+		System.out.println(c);	//null
+		ExampleSapientQues i = new ExampleSapientQues();
+//		i.m1();
+//		i.m2();
+		try{
+			I1 i1 = (I1)i;  //Downcasting as storing the parent class object in Child reference : This will give the runtime exception so catching it in Catch block
+			//Above statement similar to : I1 i2 = (I1) new ExampleSapientQues();
+			i1.m2();
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+		
+		finally{
+			System.out.println("will always get executed");
+		}
+						
+	}
+}
+
+class I1 extends ExampleSapientQues{
+	
+	public void m2(){
+		System.out.println("CM2");
+	}
+	
+	public void m4(){
+		System.out.println("CM4");
+	}
+}

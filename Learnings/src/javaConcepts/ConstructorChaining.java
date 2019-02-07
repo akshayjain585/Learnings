@@ -2,8 +2,8 @@
  * Execution order : 
  * 1. Since we have created an object of B, control will go to B class default constructor first.
  * 2. JVM finds this keyword which calls the same class constructor of one argument.
- * 3. Same class single arguement parameterized constructor has this keyword again which redirects to another same class param constructor.
- * 4. 2 arguements param constructor has super keyword which redirects to parent class param constructor
+ * 3. Same class single argument parameterized constructor has this keyword again which redirects to another same class param constructor.
+ * 4. 2 Arguments param constructor has super keyword which redirects to parent class param constructor
  * 5. Order : Parent class Param -> Child class 2 argument param const -> Child class single argument param const -> default child class const
  * This concept is called constructor chaining where one constructor can call other constructor of same class.
  * 6. Constructor can't be declared as final because its a special type of method and final is used to avoid method being overridden AND constructor can't be overridden so it can't be declared as final
@@ -14,7 +14,7 @@ package javaConcepts;
 
 class A{
 	
-	A(){
+	A(){		
 		System.out.println("Parent Class Constructor");
 	}
 	

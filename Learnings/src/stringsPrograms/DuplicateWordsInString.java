@@ -41,6 +41,7 @@ public class DuplicateWordsInString {
 
 		//String input = "Java J2EE java JaVAa j2eee";
 		String input = "my name is my name";
+		String input1 = "myName";
 		duplicateWords(input);
 	}
 
