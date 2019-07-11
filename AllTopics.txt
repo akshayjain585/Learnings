@@ -1240,6 +1240,11 @@ DELETE : Removes all rows from table if conditioin is not specified. Can be roll
 
 ********************************************************************************************************************************************** 
 
+*******************Networking**********************************************************************************************
+
+1. HTTP v/s HTTP's
+Ans. To implement HTTPS connection, the developer has to install the SSL certificate in the webserver. With HTTP, any hacker can get the network information/communication in a packet which will be in a plain text and know your sensitive information. With HTTPS, the communication between your browser/client and server is in encrypted format and the encryption is of very high level using Assymetric Encryption.
+
 Complexities :
 
 https://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/
