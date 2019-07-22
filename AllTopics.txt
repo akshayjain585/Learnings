@@ -984,10 +984,15 @@ Java Interview Questions on Private Modifier :
 
 ******************** GIT Version Control System ********************************************************************************************
 
-GIT : It is divided in three directories mainly:
+GIT : 
+It is divided in 4 directories mainly:
 1. Local Repository : Where user makes the changes/works on the project.
-2. Staging Area : Where user keeps track of the changes which will be pushed to the remote repository.
-3. Remote Repository : Every user checks in the code, which is remote repository.
+2. Staging/Index Area : Where user keeps track of the changes which will be pushed to the remote repository : The code is pushed to stage/index area using "git add <fileName>"
+3. Head : This points to the last commit user have made : The code is pushed to Head area using git commit <fileName> 
+4. Remote Repository : Every user checks in the code, which is remote repository : The code is pushed to remote/master branch using "git push origin master"
+
+Ref : https://rogerdudler.github.io/git-guide/
+https://www.edureka.co/blog/git-tutorial/
 
 1. To clone the working existing git repository?
 Ans. git clone <repo-URL>
