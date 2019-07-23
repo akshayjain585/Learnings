@@ -1272,5 +1272,19 @@ Java Interview : https://www.studytonight.com/flashcards/Java/#
 1. CamelCase String
 2. Multiples of a number in an array
 
+******************************************* Linux/Unix **********************************************************************
 
-Checking branch changes.
+1. To open a file
+Ans. vi <fileNAme>
+
+2. To enter in insert mode?
+Ans. Press i in mac or insert mode in windows
+
+3. To exit from vm or to exit after saving the changes ?
+Ans.  Press ESC + :q ,   Press ESC + :wq
+
+4. To navigate inside the file in vi editor?
+Ans. End of line : Upper Case  G, First Line : lowercase gg, Specific Line : <LineNumber>G
+
+
+Checking branch changes: Changes done in new branch.
