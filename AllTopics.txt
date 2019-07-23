@@ -1036,13 +1036,27 @@ Ans. If you need to switch branches and wants to save the modified files from cu
 11. To undo the pushed changes to remote ?
 Ans. git commit --amend 
 
+12. To check the list of branches in a repo
+Ans. git branch -a
+
+13. To create a new branch and make it in sync with master.
+Ans. git checkout -b <branchName>
+
+14. To switch back to master branch or any other branch.
+Ans. git checkout master , git checkout <branch_Name>
+
+15. To take latest pull from master to branch?
+Ans. Be in branch directory and then  git pull origin master 
+
+16. To merge your changes from branch to master?
+Ans. Get back to master branch using "git checkout master" and then git merge <branchName> and then git push to push the code to remote master or else create a PULL request (PR) to review and merge.
 
 ********************************************** Maven ******************************************************************************
 
 1. What is Maven ?
 Ans. Its a build Automation tool for the project developed by Apache.
 
-2. What does it do, its advantages and what is its lifecycle?
+2. What does it do, its advantages and what is its lifecycle?i
 Ans. It builds the project and the advantage is to download the required Jar's of the project by just mentioning it in the form of dependencies in POM(Project Object Model).xml file.
 LifeCycle :
 1. Maven Compile : Uses Maven Compiler (To compile all Java, class files)
@@ -1285,6 +1299,9 @@ Ans.  Press ESC + :q ,   Press ESC + :wq
 
 4. To navigate inside the file in vi editor?
 Ans. End of line : Upper Case  G, First Line : lowercase gg, Specific Line : <LineNumber>G
+
+5. To search for a text inside vi editor?
+Ans. Use /<text> and press n for next occurrence. 
 
 
 Checking branch changes: Deleted from branch
