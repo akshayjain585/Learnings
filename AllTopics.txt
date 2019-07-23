@@ -1303,5 +1303,11 @@ Ans. End of line : Upper Case  G, First Line : lowercase gg, Specific Line : <Li
 5. To search for a text inside vi editor?
 Ans. Use /<text> and press n for next occurrence. 
 
+6. Shell & Kernel?
+Ans. The main difference between kernel and shell is that the kernel is the core of the operating system that controls all the tasks of the system while the shell is the interface that allows the users to communicate with the kernel. Unix is an operating system. It is the interface between the user and the hardware.
+The shell acts as an interface between the user and the kernel. Users input commands through the shell, and the kernel receives the tasks from the shell and performs them.
 
-Checking branch changes: Deleted from branch
+7. BIOS & Kernel ?
+Ans. The kernel should not be confused with the BIOS (Basic Input/Output System). The BIOS is an independent program stored in a chip on the motherboard (the main circuit board of a computer) that is used during the booting process for such tasks as initializing the hardware and loading the kernel into memory
+
+
