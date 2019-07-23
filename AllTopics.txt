@@ -1287,4 +1287,4 @@ Ans.  Press ESC + :q ,   Press ESC + :wq
 Ans. End of line : Upper Case  G, First Line : lowercase gg, Specific Line : <LineNumber>G
 
 
-Checking branch changes: Changes done in new branch.
+Checking branch changes: Deleted from branch
