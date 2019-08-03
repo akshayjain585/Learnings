@@ -1289,7 +1289,7 @@ Java Interview : https://www.studytonight.com/flashcards/Java/#
 ******************************************* Linux/Unix **********************************************************************
 
 1. To open a file
-Ans. vi <fileNAme>
+Ans. vi <fileNAme> or use gedit <fileName>
 
 2. To enter in insert mode?
 Ans. Press i in mac or insert mode in windows
@@ -1309,5 +1309,9 @@ The shell acts as an interface between the user and the kernel. Users input comm
 
 7. BIOS & Kernel ?
 Ans. The kernel should not be confused with the BIOS (Basic Input/Output System). The BIOS is an independent program stored in a chip on the motherboard (the main circuit board of a computer) that is used during the booting process for such tasks as initializing the hardware and loading the kernel into memory
+
+8. What is bash profile?
+Ans. Used to set the path in this directory. This is for configuring the user environment.
+vi ~/.bash_profile : This adds the path for the particular user.
 
 
