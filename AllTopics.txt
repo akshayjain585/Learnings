@@ -463,6 +463,9 @@ if(driver.findElements.size!=0){
 Refer : https://artoftesting.com/automationTesting/check-if-an-element-is-present-in-a-webpage-selenium-webdriver-java.html
 Note : Above code will throw an exception if findElement is used. Since, it throws "No Suce Element exception" if element is not found.
 
+23. Annotation @CacheLookup in Selenium ?
+Ans. This is basically to improve the script performance as it stores the webelement in cache memory and use it from there rather searching for the element from DOM. Can be used for the webelement which is used so many times in a script. So, to avoid hitting the DOM again and again looking for the element, its better to load it from cache memory. 
+But it has one disadvantage as well, if page gets refreshed or DOM is changed, the script will throw StaleElement exception.
 
 ******************** TestNG **********************************************************************************************************************
 
