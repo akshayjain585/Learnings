@@ -471,7 +471,7 @@ But it has one disadvantage as well, if page gets refreshed or DOM is changed, t
 Ans. WebDriverEventListener is an interface which has methods to capture the webdriver logs like trying to open an url, clicking, locating an element etc.
 EventFiringWebDriver is a class which implemnents WebDriver interface. This means we get all WebDriver interface methods + 2 additional methods : Register (to listen to the WebDriver events), Unregister(to detach from listening to webDriver events)
 Ref : https://www.toolsqa.com/selenium-webdriver/event-listener/
-Note : Good for adding more logs to scripts.
+Note : Good for adding more logs to scripts to be printed on console when scripts are running.
 
 ******************** TestNG **********************************************************************************************************************
 
