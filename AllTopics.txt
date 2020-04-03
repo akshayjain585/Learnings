@@ -1041,6 +1041,7 @@ git fetch : Pulls the changes in the new branch in local and then git merge is r
 
 10. What is git stash?
 Ans. If you need to switch branches and wants to save the modified files from current branch. Use git stash to save it. Below are real example and usage.
+
 Issue : error: Your local changes to the following files would be overwritten by merge:
 Option 1: Commit the changes using
 git commit -m” custom message”
@@ -1066,7 +1067,7 @@ How above git stash works ?
 	3. To resolve this, use the approach to stash your changes from branch A, means saving the changes in temp directory, then pull changes from master and then get the changes back to working directory in branch A. This operation basically deletes the changes from the files modified temporarily and saves it somewhere. This doesn't make any changes to the files which are newly created and yet to add.
 	4. Commands : git stash (To stash the changes)
 	5. git pull origin master (To get latest changes from master)
-6. git pop (To get those changes back)
+	6. git pop (To get those changes back)
 
 11. To undo the pushed changes to remote ?
 Ans. git commit --amend 
