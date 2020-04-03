@@ -1040,7 +1040,33 @@ Ans. git pull = git fetch + git merge
 git fetch : Pulls the changes in the new branch in local and then git merge is required to reflect the changes in local repo.
 
 10. What is git stash?
-Ans. If you need to switch branches and wants to save the modified files from current branch. Use git stash to save it.
+Ans. If you need to switch branches and wants to save the modified files from current branch. Use git stash to save it. Below are real example and usage.
+Issue : error: Your local changes to the following files would be overwritten by merge:
+Option 1: Commit the changes using
+git commit -m” custom message”
+Option 2: Stash it
+Stash can act like a sack. Where you can push changes and pop them in reverse order use the following commands.
+git stash
+And do a merge and pull the stash
+git stash pop
+Option 3: Discard the local changes
+using 
+git reset --hard
+or 
+git checkout -t -f remote/branch
+Or: 
+Discard local changes for a specific file
+using 
+git checkout filename
+
+How above git stash works ?
+	1. You have cut a branch from master like branch "A" where you are working on something and you need to pull changes from master in branch A. However, while doing "git pull origin master" in branch A, you are getting this message : "
+	Issue : error: Your local changes to the following files would be overwritten by merge:
+	2. This issue comes, if there is a change in the same file in master branch where you are working in branch A.
+	3. To resolve this, use the approach to stash your changes from branch A, means saving the changes in temp directory, then pull changes from master and then get the changes back to working directory in branch A. This operation basically deletes the changes from the files modified temporarily and saves it somewhere. This doesn't make any changes to the files which are newly created and yet to add.
+	4. Commands : git stash (To stash the changes)
+	5. git pull origin master (To get latest changes from master)
+6. git pop (To get those changes back)
 
 11. To undo the pushed changes to remote ?
 Ans. git commit --amend 
@@ -1049,7 +1075,7 @@ Ans. git commit --amend
 Ans. git branch -a
 
 13. To create a new branch and make it in sync with master.
-Ans. git checkout -b <branchName>
+Ans. git checkout -b <branchName> or git branch <brandh_Name>
 
 14. To switch back to master branch or any other branch.
 Ans. git checkout master , git checkout <branch_Name>
