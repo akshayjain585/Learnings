@@ -997,7 +997,7 @@ GIT :
 It is divided in 4 directories mainly:
 1. Local Repository : Where user makes the changes/works on the project.
 2. Staging/Index Area : Where user keeps track of the changes which will be pushed to the remote repository : The code is pushed to stage/index area using "git add <fileName>"
-3. Head : This points to the last commit user have made : The code is pushed to Head area using git commit - m "Message" 
+3. Head/Commit : This points to the last commit user have made : The code is pushed to Head area using git commit - m "Message" . The files are committed and the head version is updated in hidden .git folder. Remember, these files are not pushed to remote but are in committed stage and all there versions are mainted in .git folder with their HASH/commit ID.
 4. Remote Repository : Every user checks in the code, which is remote repository : The code is pushed to remote/master branch using "git push origin master"
 
 Ref : https://rogerdudler.github.io/git-guide/
@@ -1008,8 +1008,8 @@ Ans. git clone <repo-URL>
 
 2. To add file to Staging area from Local repository?
 Ans. git add <file-name> //This will add the file to staging area
-git add* // To add all changed files to staging.
-Note : The changes are not in HEAD area still. 
+git add * // To add all changed files to staging.
+Note : The changes are not in HEAD/Commit area still. 
 
 3. To remove the file from staging area as still some changes are left out before committing?
 Ans. git rm -cached<file-name>
@@ -1086,6 +1086,70 @@ Ans. Be in branch directory and then  git pull origin master
 
 16. To merge your changes from branch to master?
 Ans. Get back to master branch using "git checkout master" and then git merge <branchName> and then git push to push the code to remote master or else create a PULL request (PR) to review and merge.
+
+
+
+Note : Some more for GIT
+
+
+1. To delete the git repo (.git) folder, so that its no longer a git repo which we make by using git init command ?
+Ans. rm -rf .git   (This will delete the .git hidden folder and if you do git status, it will show a error message saying "fatal: not a git repository")
+
+2. What is .gitignore file ?
+Ans. Used to avoid any files for tracking. Create a file with same name as ".gitignore" and put the files whichever you want to ignore like log files and all. Thus, when new logs get generated and if you do git status, it wont show you that log file as the modified/tracked file ready for commit. 
+Note : This will not work if that file mentioned in .gitignore was already tracked earlier. So, you need to untrack that file first. And do untrack, use below command :
+git rm --cached <file_Name>
+
+
+4. git diff v/s git diff --staged?
+Ans. git diff : To compare staging area with working directory
+git diff --staged : To compare staging area with last commit
+
+
+5. Directly commit skipping staging area ?
+Ans. git commit -a -m "Direct commit" : This will skip the staging area when we do "git add ." and directly commit the file. This doesn't skip the untracked files means which is completely new but skips the tracked files which are modified and needs to be staged and then committed.
+
+6. Commit history ?
+Ans. git log : It shows all the commits with commit ID so that you can switch to the previous copy of the commit. Use 'q' to come out of the log.
+
+7. Delete and Rename in GIT ?
+Ans. Delete : git rm <file_Name> : This will automatically staged this change and then you just need to commit this.
+Rename : git mv <source_File> <Renamed_File> : This will automatically staged this change and then you just need to commit this.
+
+8. Delete Branch in GIT ?
+Ans. git branch -d <branch_Name> : Will give error if not merged
+git branch -D <branch_Name> : Force delete branch
+
+You should not have any tracked(Stage)/Untracked file while switcing between branches else you will get an error. Should be in commit state, not pushed to the branch. But in commit state.
+
+9. HEAD?
+Ans.
+HEAD points to last commit if you do git log : To navigate back to previous/any past commit, git checkout <commit_ID> and it will move the HEAD to that commit.
+HEAD -> master, origin/master, origin/HEAD, playgroundtestcases) : This means master and playgroundtestcases branch also has the HEAD pointed to same commit. If branch is ahead of master, in git log it will show the previous commit ID pointing to master and HEAD pointing to latest commit in branch.
+
+10. MergeConlicts ?
+Ans. MergeConflicts come when you have changes in the same file same line where the code is already pushed by someone in the repo. Then, you have to remove the merge conflicts and stage-commit the updated file
+
+11. Help ?
+Ans. git <command> --help
+
+12. Reset?
+Ans. This can be used if you have committed some changes but still not pushed to remote and want to reset it. Below reset will move the HEAD to the reseted commit
+Mixed (Default reset) (It resets the commit and keep the changes in working directory, means it will be shown as modified and you have to perform git add) : git reset --mixed HEAD~1 (Last commit from git log, it can go upto 3) or git reset HEAD~1
+Soft (It resets the commit and keep the changes in staging area means you dont have to do git add again) : git reset soft HEAD~1
+Hard (It resets the commit and delete the changes from working directory itself) : git reset hard HEAD~1
+
+13. Revert ?
+Ans. This is helpful if you have pushed some commit to remote and want to revert it. RESET wont work here because it resets only in the local repository not in the remote repository.
+Ans. git revert <commit_ID> : It won't remove the history from git log but revert the code.
+
+14. Need to merge specific commit to master branch ?
+Ans. git cherry-pick <commitID from feature branch>
+
+15. git blame ?
+Ans. To see the history of who edited the files and when. : git blame <file_Name>
+
+
 
 ********************************************** Maven ******************************************************************************
 
