@@ -1,17 +1,17 @@
 package collectionsPrograms;
 
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class SetExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		//Set<Integer> set = new HashSet<Integer>();
-		//Set<Integer> set = new LinkedHashSet<Integer>();
-		Set<Integer> set = new TreeSet<Integer>();
+		Set<Integer> set = new HashSet<Integer>();
+//		Set<Integer> set = new LinkedHashSet<Integer>();
+//		Set<Integer> set = new TreeSet<Integer>();
 		
 		set.add(4);
 		set.add(2);

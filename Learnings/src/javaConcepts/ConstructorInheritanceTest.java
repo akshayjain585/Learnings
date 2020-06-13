@@ -44,7 +44,7 @@ class Child extends Parent{
 	}
 	
 	Child(String name){
-		super("abc");
+		//super("abc"); //If we comment super keyword then default constructor of parent class will get called, means always default parent class constructor will be called unless super is defined for any specific constructor
 		System.out.println("Child class Parameterized constructor");
 	}
 	
@@ -88,9 +88,9 @@ public class ConstructorInheritanceTest {
 	
 		
 		
-	//	Child c1 = new Parent(); //Will give compile time error else will have to cast to child object
+//		Child c1 = new Parent(); //Will give compile time error else will have to cast to child object
 		System.out.println("**");
-		//Child c1 = (Child) new Parent(); //Have casted Child object to child class but gives runtime error
+//		Child c1 = (Child) new Parent(); //Have casted Child object to child class but gives runtime error
 	}
 
 }

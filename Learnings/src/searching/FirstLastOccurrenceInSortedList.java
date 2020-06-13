@@ -47,6 +47,7 @@ public class FirstLastOccurrenceInSortedList {
 		int[] list = {1,2,4,7,8,9,9,9,10,12};
 		int key = 9;
 		System.out.println(FirstLastOccurrenceInSortedList.firstOccurrenceBS(list, key));
+		System.out.println(lastOccurrenceBS(list,key));
 	}
 
 }

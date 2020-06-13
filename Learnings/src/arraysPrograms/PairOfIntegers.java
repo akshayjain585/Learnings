@@ -34,7 +34,7 @@ public class PairOfIntegers {
 		if(list.length<2){
 			return;
 		}
-		Set<Integer> s = new HashSet<>(list.length);
+		Set<Integer> s = new HashSet<>();
 		for(int value : list){
 			int target = key - value;
 			if(s.contains(target)){

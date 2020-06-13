@@ -419,8 +419,7 @@ Ans. It has four components :
 2. JSON(Java Script Object Notation) Wire protocol to send the information to browser driver like firefoxdriver, chromedriver etc.
 3. Browser drivers like FirefoxDriver, ChromeDriver,OperaDriver etc
 4. Browsers like Firefox Browser, chrome , Internet, Safari
-https://www.softwaretestingmaterial.com/selenium-webdriver-architecture/
-
+https://www.softwaretestingmaterial.com/selenium-webdriver-architecture 
 WebDriver hierarchy :
 1. SearchContext is the super interface which has only two methods : findElement and findElements
 2. WebDriver is an interface which extends SearchContext interface. WebDriver has many methods like get(String url), close(), quit() etc.
@@ -1166,6 +1165,8 @@ Therefore, Maven is a build tool which compiles,Test and generates the resource 
 
 3. Components of dependencies?
 Ans. GroupID, Artifact, Version No
+GroupID: GroupID is the package ID of the project. The package will be created with same name as group ID mentioned while creating the maven project.
+Artifact ID: Its the unique name of the project.
 
 4. Maven Commands :
 1. mvn clean install : Clean the target folder jar files, Compile the code, Test the code(run the test cases), generate the Jar file (Maven complete lifecycle)
