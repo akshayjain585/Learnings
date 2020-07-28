@@ -38,6 +38,69 @@ Xpath :
 8. "//input[@type='text' and not(contains(@title,'Search'))]"
 9. CSS : https://www.softwaretestinghelp.com/css-selector-selenium-locator-selenium-tutorial-6/
 
+CSS Selector:
+
+1. id--> htmltag#id , #id
+2. class --> htmltag.classname, .classname, .c1.c2.c3, htmltag.c1.c2.c3...cn
+3. parent>childtag
+
+Examples for id and class :
+ul#categories
+#username
+input#username
+input.form-control.private-form__control.login-email
+input#username.form-control.private-form__control.login-email
+input.login-email
+.form-control.private-form__control.login-email
+
+4. htmltag[id='value']
+//div[@id='test']
+
+input[id='username'] -- css with one attribute
+//input[@id='username'] --xpath
+
+input[id='username'][type='email'] -- css with two attributes
+//input[@id='username' and @type='email'] -- xpath
+
+5. contains the text in css:
+input[id*='user']
+input[id*='name']
+
+id = 
+test_123
+test_345
+test_456
+input[id*=test_]
+
+6. starting the text in css:
+input[id^='user']
+
+7. ending the text in css:
+input[id$='name']
+
+8. comma in css:
+div.private-form__input-wrapper, input#username
+
+9. first-of-type in css:
+ul#categories>li:first-of-type
+
+10. last-of-type in css:
+ul#categories>li:last-of-type
+
+11. nth-of-type
+ul#categories>li:nth-of-type(1)
+ul#categories>li:nth-of-type(14)
+ul#categories>li:nth-of-type(3)
+ul#categories>li:nth-of-type(n) -- all
+
+12. sibling of element:
+div.private-form__input-wrapper + div
+div.private-form__input-wrapper+div.private-form__meta
+ul#categories>li:nth-of-type(3)+li
+
+13. not operator in css:
+input.form-control.private-form__control:not(.login-password)
+
 Some of the common assertions supported by TestNG are
 
     assertEqual(String actual,String expected)
@@ -1158,10 +1221,19 @@ Ans. Its a build Automation tool for the project developed by Apache.
 2. What does it do, its advantages and what is its lifecycle?i
 Ans. It builds the project and the advantage is to download the required Jar's of the project by just mentioning it in the form of dependencies in POM(Project Object Model).xml file.
 LifeCycle :
-1. Maven Compile : Uses Maven Compiler (To compile all Java, class files)
+1. Maven Compile : Uses Maven Compiler (To compile all Java, class files and checks for any syntax errors in Maven project)
 2. Maven Test : Uses Maven Surefire plugin to run all test cases
 3. Maven package : Source plugin which generates the JAR's,WAR's,EAR's files
 Therefore, Maven is a build tool which compiles,Test and generates the resource file in the form of JAR's,WAR's or EAR's file to be used by anyone else.
+
+Sample commands from Maven :
+mvn clean : Cleans all the temporaray files/reports from target folder in Maven project.
+
+mvn compile : It basically checks if there are any syntax errors in any of the scripts in mavne project. Eclipse/Any editor also will show if there are any syntax error but when you run the build in Jenkins
+and if someone checkins the code with syntax error, Maven compile command will help to identify at what line under which file the error exists.
+
+mvn test : It uses surefire plugin to run all the tests under src/test/java folder and Maven will mandatorily need java Filename appended with "Test" to pick for execution. Example: LoginTest.java, HomePageTest.java etc. If filename is not appended with "Test" under src/test/java folder, it will not be picked up for execution when user does mvn test. To run testng.xml file by doing mvn test command using surefire-plugin, you need to mention testng.xml file under configuration tag under surefire-plugin in pom.xml file explained below in Question 5. Once, testng.xml file is integrated with maven sure-fire plugin, it will just run the tests from testng.xml file and not directly from the folder under src-test-java.
+
 
 3. Components of dependencies?
 Ans. GroupID, Artifact, Version No
@@ -1217,6 +1289,8 @@ Ans. Jenkins and Hudson are Continues Integration tool, which gives you power to
 Similarly you can have daily build, nightly build or weekly build process established in Jenkins or Hudson
 
 Read more: https://javarevisited.blogspot.com/2015/01/difference-between-maven-ant-jenkins-and-hudson.html#ixzz5VDeCVkYm
+
+http://localhost:8080/jenkins : Running locally from system after initializing the jar file : java -jar "war file"
 
 
 ********************** File Handling **************************************************************************************************
