@@ -15,22 +15,24 @@ public class LongestSubstring {
 			String templongestSubString = "";
 			for(Character key : c){
 				if(set.contains(key)){
-					actualLongestSubString = "";
+					templongestSubString = "";
 					set.clear();
 				}
-				actualLongestSubString = actualLongestSubString + key ;
+				templongestSubString = templongestSubString + key ;
 				set.add(key);
-				if(actualLongestSubString.length() > templongestSubString.length()){
-					templongestSubString = actualLongestSubString;
+				if(templongestSubString.length() > actualLongestSubString.length()){
+					actualLongestSubString = templongestSubString;
 				}
 			}
-			System.out.println(templongestSubString+" and the length is : "+templongestSubString.length());
+			System.out.println(actualLongestSubString+" and the length is : "+actualLongestSubString.length());
 		}
 		
 	public static void main(String[] args){
 		String input = "abcabcbb";
 		String input1 = "GEEKSFORGEEKS";
+		String input2 = "dvdf";
 		longestSubStringStackOverFlow(input1);
 		longestSubStringStackOverFlow(input);
+		longestSubStringStackOverFlow(input2);
 	}
 }

@@ -6,6 +6,8 @@
 5. Throws : To declare an exception mainly for checked exception in a method signature followed by a class and can throw multiple exceptions
 6. Method Overriding : If parent class doesn't declare an exception then subclass can't declare a checked exception but can do Runtime(unchecked) exceptions.
 7. If superclass declares an exception, then subclass can not declared a parent means top level exception but can declare same exception
+
+Check this link : https://javaconceptoftheday.com/return-value-from-try-catch-finally-blocks/
 */
 
 package exceptionHandling;
@@ -17,26 +19,48 @@ public class TryCatchFinally {
 	static void getROI() throws Exception {
 		throw new IOException("Learning throws and throw Exception");
 	}
+	
+    static String methodReturningValue()
+    {
+        String s = null;
+        try
+        {
+            s = "return value from try block";
+            return s;
+        }
+        catch (Exception e)
+        {
+            s = s + "return value from catch block";
+            return s;
+        }
+        finally
+        {
+            s = s + "return value from finally block";
+        }
+    }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		try{
-			//int data = 25/0;
-			//System.out.println(data);
-			getROI();
-		}
+//		try{
+//			int data = 25/0;
+//			System.out.println(data);
+//			getROI();
+//			
+//		}
+//		
+//		catch(Exception e){
+//			e.printStackTrace();
+//			System.out.println(e);
+//			
+//		}
+//		finally{
+//			System.out.println("Will always be executed either exception is handled or not");
+//		}
+//		
+//		System.out.println("Outside try catch and finally block");
+		System.out.println(methodReturningValue());
 		
-		catch(Exception e){
-			e.printStackTrace();
-			System.out.println(e);
-			
-		}
-		finally{
-			System.out.println("Will always be executed either exception is handled or not");
-		}
-		
-		System.out.println("Outside try catch and finally block");
 
 	}
 

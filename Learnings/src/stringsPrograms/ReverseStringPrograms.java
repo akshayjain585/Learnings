@@ -31,21 +31,21 @@ public class ReverseStringPrograms {
 	//Input : This is a String
 	//Output : THIS si A gnirts
 	
-	public static void strProgram(String input){
+	public static void sP(String input) {
 		String[] words = input.split(" ");
-		for(int i=0; i<words.length; i++){
-			if(i%2==0){
+		for(int i=0; i<words.length; i++) {
+			if(i%2 == 0) {
 				System.out.print(words[i].toUpperCase()+" ");
-			}else{
-				char[] ch = words[i].toCharArray();
-				for(int j=ch.length-1; j>=0; j--){
-					System.out.print(ch[j]);
+			}else {
+				String word = words[i];
+				for(int j=word.length()-1; j>=0; j--) {
+					System.out.print(word.charAt(j));
 				}
 				System.out.print(" ");
 			}
 		}
 	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -59,7 +59,7 @@ public class ReverseStringPrograms {
 		reverseWordsInString(input);
 		System.out.println();
 		String in = "This is a String" ;
-		strProgram(input);
+		sP(input);
 			
 	}
 

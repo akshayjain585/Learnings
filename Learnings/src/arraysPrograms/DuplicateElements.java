@@ -1,8 +1,7 @@
 package arraysPrograms;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -32,6 +31,15 @@ public class DuplicateElements {
 		
 		for(Integer key : set){
 			System.out.print(key+", ");
+		}
+		
+		System.out.println("Using Map entry set");
+		
+		Set<Map.Entry<Integer,Integer>> set1 = map.entrySet();
+		for(Map.Entry<Integer,Integer> key : set1) {
+			if(key.getValue()>1) {
+				System.out.println(key);
+			}
 		}
 		
 	}

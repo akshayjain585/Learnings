@@ -1,6 +1,8 @@
 package arraysPrograms;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class PairOfIntegers {
@@ -42,16 +44,35 @@ public class PairOfIntegers {
 			}else{
 				s.add(value);
 			}
-		}
-		
-		
+		}	
 	}
+		
+		// Returning indices of numbers if pair is found. Solution is such that only one pair can be found, from leetcode. Thats why have put return statement to not continue looking for other numbers.
+	    public static int[] twoSum(int[] nums, int target) {
+	        
+	        Map<Integer,Integer> map = new HashMap<>();
+	        
+	        for(int i=0; i<nums.length; i++){
+	            int comp = target - nums[i];
+	            if(map.containsKey(comp)){
+	                return new int[] {map.get(comp),i};
+	            }else {
+	                map.put(nums[i],i);
+	            }
+	        }        
+	        return new int[] {-1,-1};
+	}
+	
 	
 	public static void main(String[] args){
 		
 		int[] list = {2,4,3,5,7,8,9};
 		//pair(list,7);
 		pairLessComplexity(list,7);
+		int[] res = twoSum(list,100);
+		for(int i=0; i<res.length; i++) {
+			System.out.print(res[i]+" , ");
+		}
 	}
 
 }

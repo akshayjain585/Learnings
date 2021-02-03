@@ -79,10 +79,11 @@ public class BalancedParenthesis {
 		String input1 = "[()]{}{[()()]()}";
 		String input2 = "[(]){}}]";
 		String input3 = "[(]){{}}[]";
+		String input4 = "((()})";
 
 		isBalancedP(input1);
 		isBalancedP(input2);
-		isBalancedP(input3);
+		isBalancedP(input4);
 
 
 	}

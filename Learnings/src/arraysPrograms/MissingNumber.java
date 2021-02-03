@@ -25,7 +25,10 @@ public class MissingNumber {
 	}
 	
 	public static void mN(int[] list){
-		int n = list.length+1;
+		System.out.println("Length of input: "+list.length);
+		// Added + 1 as there is one missing number in the list (Note : Main reason to add + 1 in n = list.length + 1 if list starts from 1)
+		int n = list.length;
+		System.out.println(n);
 		int aS = 0;
 		for(int i=0; i<list.length; i++){
 			aS = aS + list[i];
@@ -38,7 +41,7 @@ public class MissingNumber {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] list = {1,2,3,4,5,6,8,9,10};
+		int[] list = {0,1,2,3,4,5,6,8,9};
 		missingN(list);
 		System.out.println();
 		System.out.println("Other method using Formula");

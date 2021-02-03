@@ -56,8 +56,8 @@ public class PrimeNumber {
 		//Scanner scan = new Scanner(System.in);
 		//System.out.println("Enter the number: ");
 		//int num = scan.nextInt();
-		//isPrimeNumber(num);
-		//rangePrimeNumber(100);
-		rPN(100);
+		isPrimeNumber(2);
+		rangePrimeNumber(2);
+//		rPN(2);
 }
 }

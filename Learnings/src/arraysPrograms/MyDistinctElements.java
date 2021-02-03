@@ -1,6 +1,7 @@
 package arraysPrograms;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -24,7 +25,7 @@ public class MyDistinctElements {
     
     public static void distictUsingHashMap(int[] list){
     	
-    	Map<Integer,Integer> map = new HashMap<>();
+    	Map<Integer,Integer> map = new LinkedHashMap<>();	// To get in same order
     	for(int key : list){
     		
     		if(map.containsKey(key)){  			
@@ -33,13 +34,21 @@ public class MyDistinctElements {
     			map.put(key, 1);
     		}
     	}
-    	
+    	    	
     	Set<Integer> s = map.keySet();
     	for(Integer key : s){
     		System.out.print(key+",");
+    	}	
+    	System.out.println();
+    }
+    
+    public static void distinctUsingSet(int[] list) {
+    	Set<Integer> set = new LinkedHashSet<>();	// To get in same order : LinkedHashSet
+    	for(int key : list) {
+    		set.add(key);
     	}
-    	
-    	
+    	System.out.print(set);
+    	System.out.println();
     }
      
     public static void main(String a[]){
@@ -48,6 +57,7 @@ public class MyDistinctElements {
         MyDistinctElements.printDistinctElements(nums);
         System.out.println();
         distictUsingHashMap(nums);
+        distinctUsingSet(nums);
     }
 }
 

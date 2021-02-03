@@ -50,6 +50,24 @@ public class SortArrayMultipleIterators {
 		}
 	}
 	
+	public static void segregateZeroAndOne(int[] list) {
+		int startIndex = 0;
+		int endIndex = list.length-1;
+		
+		while(startIndex < endIndex) {
+			if(list[startIndex] > list[endIndex]) {
+				int temp = list[startIndex];
+				list[startIndex] = list[endIndex];
+				list[endIndex] = temp;
+				startIndex ++;
+				endIndex --;
+			}else {
+				startIndex ++;
+				endIndex --;
+			}
+		}
+	}
+	
 	public static void printList(int[] list){
 		for(int i=0; i<list.length; i++){
 			System.out.print(list[i]+" ");
@@ -68,6 +86,10 @@ public class SortArrayMultipleIterators {
 		System.out.println("After Sorting using count");
 		sortArrayUsingCount(list);
 		printList(list);
+		segregateZeroAndOne(list);
+		System.out.println();
+		printList(list);
+
 
 
 	}

@@ -2,7 +2,7 @@ package arraysPrograms;
 
 public class NumberAdditionInArray {
 	
-	public static void numAdd(int[] list1, int[] list2){
+	public static void numAddSub(int[] list1, int[] list2){
 		String sum1 = "";
 		String sum2 = "";
 		
@@ -15,15 +15,15 @@ public class NumberAdditionInArray {
 			sum2 = sum2 + list2[i];
 		}
 		int s2 = Integer.parseInt(sum2);
-		System.out.println(s1+s2);
-	
+		System.out.println("Addition of 2 arrays : "+(s1+s2));
+		System.out.println("Subtraction of 2 arrays : "+(s2-s1));	// Assumption is list2 is greater than list1 for subtraction
 	}
 	
 	public static void main(String[] args) {
 		int[] list1 = new int[] {1,2,3,4};
 		int[] list2 = {5,6,7,8};
 		
-		numAdd(list1,list2);
+		numAddSub(list1,list2);
 	}
 
 }

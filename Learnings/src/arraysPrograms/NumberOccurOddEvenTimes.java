@@ -23,6 +23,16 @@ public class NumberOccurOddEvenTimes {
 				System.out.println("The number occurred odd times are : "+key+" and the value is :"+map.get(key));
 			}
 		}
+		
+		// Using Map entry set
+		Set<Map.Entry<Integer,Integer>> keySet = map.entrySet();
+		for(Map.Entry<Integer, Integer> key : keySet) {
+			if(key.getValue()%2 == 0) {
+				System.out.println("Even keys and their values are => "+key);
+			}else {
+				System.out.println("Odd keys and their values are => "+key);
+			}
+		}
 	}
 	
 	public static void main(String[] args) {

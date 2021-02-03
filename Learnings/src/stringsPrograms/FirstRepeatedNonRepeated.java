@@ -26,6 +26,7 @@ public class FirstRepeatedNonRepeated {
 		
 		//Will not use Set and .keySet returns HashSet which doesn't maintain the order
 		//Set<Character> set =  map.keySet();
+		// Actual reason is this : Have not converted it into set to iterate the map because we want to iterate to each and every character rather iterating the map with values.
 		for(char c:ch){
 			if(map.get(c)==1){
 				System.out.println("The first non repeated character in String is "+c);

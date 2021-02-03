@@ -292,6 +292,9 @@ TestPlanning process :
 8. Entry Criteria
 9. Exit Criteria
 
+S/W, H/W requirements
+
+
 
 Responsibilities on daily basis :
 1. Review the testing activities majorly by conducting the standups/scrum
@@ -636,7 +639,7 @@ public void test(expectedException=ElementNotFoundException){}
 
 11. How to do parallel testing in TestNG?
 Ans. Using parallel attribute in testNG file
-<suite name="SmokeSuite" parallel="test/classes/methods/instance" thread-count="5"> : Threadcount : no of browsers to execute the test.
+<suite name="SmokeSuite" parallel="test/classes/methods/instance" thread-count="5"> : Threadcount : no of users to execute the test.
 Reference : https://www.softwaretestingmaterial.com/parallel-test-execution-testng/
 
 12. Customised reports in TestNG?
@@ -774,6 +777,9 @@ json.put("Name","Akshay Jain");
 json.put("FirstName","Akshay");
 json.put("LastName","Jain");
 
+request.body(requestParams.toJSONString());
+
+
 9. Deserializing JSON response body to a class? //Ref : http://toolsqa.com/rest-assured/deserialize-json-response-class-rest-assured/
 Ans. To deserialize the JSON body and do the assertion. Below steps :
 1. Create a class which has same no. of variables as the number of nodes returned by the server in Response body. 
@@ -802,6 +808,82 @@ Ans.
 4. Soap's java API is JAX-WS. Rest's Java api is JAX-RS
 5. Soap needs more bandwidth. Rest needs less.
 
+
+Note : Take the response for any API call in response object. Now, to verify the below things
+1. StatusLine : String actualStatusLine = response.getStatusLine();
+2. StatusCode : int actualStatusCode = response.getStatusCode();
+3. Header : String actualHeaderValue = response.getHeader("Content-type");
+4. Headers: Headers actualResponseHeaders = response.getHeaders();
+for(Headers header : actualResponseHeaders){
+	header.getName() and header.getValue()
+}
+5. Body: Ways to validate JSON responses. 
+
+a). ResponseBody body = response.getBody();	// Mainly useful for small single liner validation. But fails if some value is updated in wrong node in JSON response.
+String asBody = body.asString();
+Do assertion on string.
+
+b). JsonPath jsonPathEvaluator = response.jsonPath(); // This returns the json path object. // Use jsonpathevaluator online tool to get the json path value for any nodes.
+String city = jsonPathEvaluator.get("City");
+
+c). Deserialize JSON response. Create a class with same number of nodes present in JSON response.
+public class RegistrationSuccessResponse {
+ // Variable where value of SuccessCode/Message node will be copied
+ // Note: The name should be exactly as the node name is present in the Json
+
+ public String SuccessCode;
+ public String Message;
+}
+
+ResponseBody body = response.body();
+RegistrationSuccessResponse regSuccessObject = body.as(RegistrationSuccessResponse.class);
+
+Explaination : This method call will internally do two things
+1. Create an instance of RegistrationSuccessResponse class.
+2. Then copy the Node value of Json to the respective variable in the Class. For e.g. Value of SuccessCode node to the Variable SucessCode in the class.
+Assert.assertEquals("201",regSuccessObject.SuccessCode);
+
+d). Deserialize JSON response in List
+JsonPath js = response.jsonPath();
+List<String> allBooks = js.getList("books.title");
+
+
+Sample Methods for API's :
+
+	public static Response post(String uRI, String stringJSON){
+		
+		RequestSpecification requestSpecification = RestAssured.given().body(stringJSON);
+		requestSpecification.contentType(ContentType.JSON);
+// To use above 2 lines of code in same line. Use below code:
+		RequestSpecification rs = RestAssured.given().body(stringJSON).contentType(ContentType.JSON);
+		Response response = requestSpecification.post(uRI);
+		return response;
+		
+	}
+	
+	public static Response put(String uRI, String stringJSON){
+		
+		RequestSpecification requestSpecification = RestAssured.given().body(stringJSON);
+		requestSpecification.contentType(ContentType.JSON);
+		Response response = requestSpecification.put(uRI);
+		return response;	
+	}
+	
+	public static Response get(String uRI){
+		
+		RequestSpecification requestSpecification = RestAssured.given();
+		requestSpecification.contentType(ContentType.JSON);
+		Response response = requestSpecification.get(uRI);
+		return response;
+	} 
+
+	public static Response delete(String uRI){
+		
+		RequestSpecification requestSpecification = RestAssured.given();
+		requestSpecification.contentType(ContentType.JSON);
+		Response response = requestSpecification.delete(uRI);
+		return response;
+	}
 
 
 ******************** String & Collections ********************************************************************************************
@@ -988,7 +1070,7 @@ Ans. Casting means taking an object of one type and converting it into an anothe
 Ans. Upcasting/Widening is possible in Java and done automatically. For downcasting, we have to typecast the object of one type into another's object type.
 Example :
 WebDriver driver = new FirefoxDriver();, Parent parent = new Child(); //This is upcasting and supported bydefault in Java 
-Here WebDriver is a super interface of every browser driver class like FirefoxDriver,ChromeDriver,SafariDriver etc. This means we are upcasting FirefoxDriverclass object to WebDriver interface. That means, WebDriver interface reference is holding an object of FirefoxDriver class. This way, we can not call the methods of FirefoxDriver class, only the methods which are overridden by FirefoxDriver class from WebDriver interface will be called. If we take Parent example, this means Parent class reference is holding an object of Child class and only the overridden methods in Child class will be called along with all the methods of Parent class.
+Here WebDriver is a super interface of every browser driver class like FirefoxDriver,ChromeDriver,SafariDriver etc. This means we are upcasting FirefoxDriverclass object to WebDriver interface. That means, WebDriver interface reference is holding an object of FirefoxDriver class. This way, we can not call all the methods of FirefoxDriver class, only the methods which are overridden by FirefoxDriver class from WebDriver interface will be called. If we take Parent example, this means Parent class reference is holding an object of Child class and only the overridden methods in Child class will be called along with all the methods of Parent class.
 
 FirefoxDriver driver = (FirefoxDriver) new WebDriver;, Child child = (Child) new Parent(); // This is downcasting and not supported in Java by default so here we have to typecast the Object of parent class into Child's class reference.
 

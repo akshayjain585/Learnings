@@ -18,7 +18,7 @@ public class CommonElements {
 	}
 	
 	public static void cEUsingSet(int[] list1, int[] list2){
-		Set<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<Integer>(list1.length);
 		for(Integer s1 : list1){
 			set.add(s1);
 		}
@@ -26,8 +26,9 @@ public class CommonElements {
 		for(Integer s : list2){
 			if(set.contains(s)){
 				System.out.println("Duplicate elements are "+s);
+				// Remove the element from the set as the list2 might have duplicate elements and set will return true again with contain() method and print
+				set.remove(s);
 			}
-			set.add(s);
 		}		
 	}
 	
@@ -52,7 +53,7 @@ public class CommonElements {
 	public static void main(String[] args){
 			
 		int[] list1 = {10,20,30,35,44,12,2};
-		int[] list2 = {10,1,8,3,7,2};
+		int[] list2 = {10,10,1,8,3,7,2};
 		//cE(list1,list2);
 		//System.out.println();
 		//commonElements(list1,list2);

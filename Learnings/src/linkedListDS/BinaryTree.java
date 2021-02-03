@@ -262,10 +262,10 @@ class BinaryTree{
 		if(root==null){
 			return true;
 		}
-		if(root.data <=min || root.data > max){
+		if(root.data < min || root.data > max){
 			return false;
 		}
-		return isBST(root.left,min,root.data) && isBST(root.right,root.data,max);
+		return isBST(root.left,min,root.data-1) && isBST(root.right,root.data+1,max);
 	}
 
 	public static void main(String[] args){

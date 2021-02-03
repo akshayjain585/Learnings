@@ -1,27 +1,42 @@
 package searching;
 
+/*
+ * trick to apply binary search in sorted portion and ideally there will always be one sorted portion either left/right depending on the circular sorted array.
+ */
+
 public class CircularSortedArray { 
 	
 	public static int circularSA(int[] list, int key){
 		int start = 0;
 		int end = list.length-1;
 		
+		// iterate till search space contains at-least one element
 		while(start<=end){
 			int mid = (start+end)/2;
+			
+			// if key is found, return its index
 			if(list[mid]==key){
 				return mid;
 			}
+			
+			// if right half (list[mid..right]) is sorted and mid is not
+			// the key element
 			if(list[mid]<=list[end]){
-				if(list[mid]<key && key<=list[end]){
-					start = mid+1;
+				
+				// compare key with list[mid] and list[right] to know
+				// if it lies in list[mid..right] or not
+				if(list[mid] < key && list[end] >= key){
+					start = mid+1;	// go searching in right sorted half
 				}else{
-					end = mid-1;
+					end = mid-1;	// go searching left
 				}
+				// compare key with list[left] and list[mid] to know
+				// if it lies in list[left..mid] or not
 			}else{
-				if(list[start]<=key && key<list[mid]){
-					end = mid-1;
+				if(list[start]<=key && list[mid] > key){
+					end = mid-1;	// go searching in left sorted half
 				}else{
-					start = mid+1;
+					start = mid+1;	// go searching right
 				}
 			}
 		}
